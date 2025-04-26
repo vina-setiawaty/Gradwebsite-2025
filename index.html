@@ -13,7 +13,7 @@
 </head>
 
 <body class="bg-offwhite">
-    <nav class="bg-offwhite border-b-1 border-black">
+    <nav class="bg-offwhite border-b-1 border-black absolute fixed w-full z-10">
         <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 xl:max-w-[90%]">
             <!-- full container, 80% when larger than 1280, px changes the padding-->
             <div class="relative flex h-24 items-center justify-between">
@@ -90,9 +90,9 @@
         </div>
     </nav>
 
-    <div id="landing-page" class="flex flex-col h-screen w-screen">
+    <div id="landing-page" class="flex flex-col h-screen w-screen justify-between pt-24">
         <div id="landing-page-desktop-content"
-            class="flex flex-col md:flex-row items-center justify-center w-screen h-auto mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 xl:max-w-[80%]">
+            class="flex flex-col md:flex-row items-center justify-center w-screen h-auto mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 xl:max-w-[80%] pt-8">
             <div class="flex-1 justify-start items-center my-8 md:my-16">
                 <img src="./assets/website_header.svg" alt="DID 25" id="website-header-img"
                     class="h-auto w-[80%] max-w-md object-contain mb-4 sm:w-[60%]">
