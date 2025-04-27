@@ -72,11 +72,18 @@
     font-weight: 100 900;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 @theme {
     --color-black: #000000;
     --color-offwhite: #F3F3F3;
+    --color-gray: #b3b3b3;
+    --color-blue: #253465;
     --font-main: 'Nohemi', sans-serif;
     --font-secondary: 'Inter', sans-serif;
+    --font-secondary-italic: 'Inter-Italic', sans-serif;
 }
 
 body {

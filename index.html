@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./src/styles.css">
-    <script src="./src/script.js" defer></script>
+    <script src="./src/data.js" type="module"></script>
+    <script src="./src/script.js" type="module"></script>
     <link href="./src/output.css" rel="stylesheet">
     <link href="./src/styles.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="./src/w3.css">
     <title>DID 25</title>
 </head>
 
@@ -139,11 +139,11 @@
         </div>
 
 
-        <div id="batch-photo-carousel" class="relative w-full">
+        <div id="batch-photo-carousel" class="relative w-full overflow-hidden">
             <!-- Carousel wrapper -->
             <div class="relative h-auto w-auto">
                 <!-- Item 1 -->
-                <div class="absolute translate-x-full transition-translate duration-700 ease-in-out slides">
+                <div class="absolute translate-x-0 transition-translate duration-700 ease-in-out slides">
                     <img src="./assets/landing-page-slides-photo-1.png"
                         class="block w-full h-auto" alt="...">
                 </div>
@@ -185,7 +185,28 @@
                 <span class="sr-only">Next</span>
             </button>
         </div>
+        
+        <div id="batch-introduction" class="flex flex-col w-full mx-auto py-24 max-w-7xl px-2 sm:px-6 lg:px-8 xl:max-w-[80%] fade-in">
+            <p class="text-lg/2 font-secondary font-light mb-8 md:text-xl/8 w-[70%]">In the space between uncertainty and clarity, each of us found a voice. Through late nights, countless revisions, and quiet moments of doubt, we shaped ideas into impact.</p>
+            <p class="text-lg/2 font-secondary font-light mb-8 md:text-xl/8 w-[70%]">This showcase brings together 50 unique journeys—each one a testament to growth, resilience, and the pursuit of something real. Not just as designers, but as individuals learning to navigate, question, and create on our own terms.</p>
+            <p class="text-lg/2 font-secondary font-light md:text-xl/8 w-[70%]">Together, we present not just what we've made—<span class="font-secondary-italic">but who we've become.</span></p>
+        </div>
+        
+        <div id="designer-cards-introduction" class="flex flex-col w-full mx-auto pb-8 max-w-7xl px-2 sm:px-6 lg:px-8 xl:max-w-[80%] fade-in">
+            <p class="text-3xl/6 font-light mb-2 mb-8 md:text-5xl/10">The 50 Designers</p>
+            <p class="text-lg/2 font-secondary font-light md:text-xl/8 w-[75%]">With that, we introduce the 50 designers who have spent the past few years navigating this tension in their own ways. Each designer tells their unique story. Take a peek, and see how their flair, personality, and motivations shine through in their work.</span></p>
+        </div>
 
+        <div id="designer-cards-container" class="flex flex-row flex-wrap justify-center items-center w-full mx-auto pb-8 max-w-7xl px-2 sm:px-6 lg:px-8 xl:max-w-[80%] fade-in">
+        </div>
+
+    </div>
+    <div id="footer" class="flex flex-row w-full h-auto bg-offwhite">
+        <div class="flex flex-row justify-center items-center w-full mx-auto py-24 max-w-7xl px-2 sm:px-6 lg:px-8 xl:max-w-[80%] fade-in">
+            <p class="text-md/2 font-secondary font-light text-gray-500 pr-4 md:text-lg/8 md:pr-8">© 2024 All Rights Reserved</p>
+            <p class="text-md/2 font-secondary font-light text-gray-500 pr-4 md:text-lg/8 md:pr-8">Singapore 117356, 8 Architecture Dr</p>
+            <p class="text-md/2 font-secondary font-light text-gray-500 md:text-lg/8">4-6 June 2025</p>
+        </div>
     </div>
 
 </body>

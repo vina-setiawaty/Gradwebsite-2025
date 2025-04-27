@@ -1,10 +1,12 @@
+import { DESIGNER_DATA } from "./data.js";
+
 let offset = 0;
 const wrapper = document.querySelector('#scrolling-icons-wrapper');
 const images = wrapper.querySelectorAll('img');
 wrapper.style.width = `${wrapper.getBoundingClientRect().height * 5463 / 135}px`;
 const imageWidth = wrapper.getBoundingClientRect().width;
 
-slideIndex = 0;
+let slideIndex = 0;
 
 window.onload = () => {
     animateScroll();
@@ -12,7 +14,8 @@ window.onload = () => {
     prevButton.addEventListener("click", (e) => { plusSlides(-1) })
     const nextButton = document.querySelector("#next-button")
     nextButton.addEventListener("click", (e) => { plusSlides(1) })
-    showSlides(slideIndex, true);
+    showSlides(slideIndex);
+    createDesignerCards();
 }
 
 
@@ -63,7 +66,18 @@ function showSlides(n) {
     slides[slideIndex].classList.add("translate-x-0");
 }
 
-
+function createDesignerCards() {
+    const container = document.querySelector("#designer-cards-container");
+    DESIGNER_DATA.forEach((designer) => {
+        const card = document.createElement("div");
+        card.classList.add("designer-card", "h-auto", "w-auto", "mx-2", "my-2");
+        card.innerHTML = `
+            <img class="bg-blue h-[296px] w-[204px]" src="${designer.image}" alt="${designer.PreferredName}">
+            <p class="font-light font-secondary py-2">${designer.PreferredName}</h3>
+        `;
+        container.appendChild(card);
+    });
+}
 
 
 
