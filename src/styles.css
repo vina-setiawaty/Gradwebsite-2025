@@ -54,10 +54,21 @@
     font-weight: 100;
 }
 
-/* If your VF (Variable Font) is set up correctly */
 @font-face {
     font-family: 'Nohemi VF';
     src: url('../assets/fonts/Nohemi-VF-BF6438cc58ad63d.ttf') format('truetype');
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../assets/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+    font-weight: 100 900;
+}
+
+@font-face {
+    font-family: 'Inter-Italic';
+    src: url('../assets/fonts/Inter-Italic-VariableFont_opsz,wght.ttf') format('truetype');
     font-weight: 100 900;
 }
 
@@ -65,6 +76,7 @@
     --color-black: #000000;
     --color-offwhite: #F3F3F3;
     --font-main: 'Nohemi', sans-serif;
+    --font-secondary: 'Inter', sans-serif;
 }
 
 body {
@@ -75,7 +87,19 @@ body {
     color: #333;
 }
 
-/* #website-header-img {
-    width: 60%;
-    height: auto;
-} */
+  /* Initial state of elements */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Fade-in animation */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.w3-animate-right, .w3-animate-left {
+    animation-duration: 1s !important;
+}
