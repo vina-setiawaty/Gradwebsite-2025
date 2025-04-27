@@ -91,7 +91,7 @@
     </nav>
 
     <div id="landing-page" class="flex flex-col h-screen w-screen justify-between pt-24">
-        <div id="landing-page-desktop-content"
+        <div id="landing-page-desktop-header"
             class="flex flex-col md:flex-row items-center justify-center w-screen h-auto mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 xl:max-w-[80%] pt-8">
             <div class="flex-1 justify-start items-center my-8 md:my-16">
                 <img src="./assets/website_header.svg" alt="DID 25" id="website-header-img"
@@ -113,9 +113,29 @@
                 </div>
             </div>
         </div>
-        <div>
-            <img src="./assets/website_front_deco.svg" alt="batch_logos" id="landing-page-front-deco-img"
-                class="h-auto w-full object-contain">
+        <div class="h-48 overflow-hidden relative flex">
+            <div id="scrolling-icons-wrapper" class="absolute h-full flex animate-scroll whitespace-nowrap">
+                <img id="scrolling-icons-desktop-1" src="./assets/desktop-landing-icons.svg" alt="batch_logos"
+                    class="h-full w-auto object-cover">
+                <img id="scrolling-icons-desktop-2" src="./assets/desktop-landing-icons.svg" alt="batch_logos"
+                    class="h-full w-auto object-cover">
+            </div>
+        </div>
+    </div>
+    <div id="landing-page-desktop-content"
+        class="flex flex-col w-full h-auto">
+        <div class="flex flex-col w-full mx-auto py-24 max-w-7xl px-2 sm:px-6 lg:px-8 xl:max-w-[80%]">
+            <p class="text-3xl/6 font-light mb-2 md:text-5xl/10">50 Designers,</p>
+            <p class="text-3xl/6 font-light mb-2 md:text-5xl/10">50 Visions,</p>
+            <p class="text-3xl/6 font-light mb-2 md:text-5xl/10">1 Shared Journey.</p>
+        </div>
+        <div class="flex flex-col w-screen h-auto">
+            <img src="./assets/landing-page-batch-photo.png" alt="batch_photo"
+                class="h-auto w-full object-cover">
+        </div>
+        <div class="flex flex-col w-full mx-auto py-24 max-w-7xl px-2 sm:px-6 lg:px-8 xl:max-w-[80%]">
+            <p class="text-lg/6 font-light mb-2 md:text-xl/10 w-[60%]">A quiet tension drives our self-discovery—balancing authenticity with the unknown as we search for our place in a noisy world.</p>
+            <p class="text-3xl/6 font-light mb-2 md:text-5xl/10 text-right w-full">What makes me, me?</p>
         </div>
     </div>
 
