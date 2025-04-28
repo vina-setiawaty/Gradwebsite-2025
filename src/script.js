@@ -1,12 +1,12 @@
 import { DESIGNER_DATA } from "./data.js";
 
 let offset = 0;
+
+let slideIndex = 0;
 const wrapper = document.querySelector('#scrolling-icons-wrapper');
 const images = wrapper.querySelectorAll('img');
 wrapper.style.width = `${wrapper.getBoundingClientRect().height * 5463 / 135}px`;
-const imageWidth = wrapper.getBoundingClientRect().width;
-
-let slideIndex = 0;
+let imageWidth = wrapper.getBoundingClientRect().width;
 
 window.onload = () => {
     animateScroll();
@@ -20,26 +20,25 @@ window.onload = () => {
     const mobileMenuButton = document.querySelector("#mobile-menu-button");
     mobileMenuButton.addEventListener("click", (e) => {
         e.preventDefault();
-        const menuButton = document.querySelector("#menu-button");
-        const exitButton = document.querySelector("#exit-button");
-        const logo = document.querySelector("#main-logo");
-        const mobileMenu = document.querySelector("#mobile-menu");
         if (mobileMenuButton.classList.contains("active")) {
-            mobileMenuButton.classList.remove("active")
-            menuButton.classList.remove("hidden")
-            exitButton.classList.add("hidden")
-            logo.classList.remove("hidden")
-            mobileMenu.classList.add("hidden")
-            console.log("menu closed")
+            closeMenu();
         } else {
-            mobileMenuButton.classList.add("active")
-            menuButton.classList.add("hidden")
-            exitButton.classList.remove("hidden")
-            logo.classList.add("hidden")
-            mobileMenu.classList.remove("hidden")
-            console.log("menu opened")
+            openMenu();
         }
     })
+
+    const mobileMenuOptions = document.querySelectorAll(".mobile-menu-options")
+    mobileMenuOptions.forEach((option) => {
+        option.addEventListener("click", (e) => {
+            e.preventDefault();
+            console.log("clicked option")
+            closeMenu();
+        })
+    })
+
+    handlePicResize();
+
+    window.addEventListener("resize", handlePicResize);
 
     setTimeout(() => {
         const mobileOpeningPage = document.querySelector("#mobile-opening-page")
@@ -47,13 +46,20 @@ window.onload = () => {
         mobileOpeningPage.classList.add("opacity-0")
         // mobileOpeningPage.classList.add("hidden")
     }, 1500)
-    
+
     setTimeout(() => {
         const mobileOpeningPage = document.querySelector("#mobile-opening-page")
         mobileOpeningPage.classList.add("hidden")
     }, 2100)
 }
 
+function handlePicResize() {
+    console.log("resizing")
+    const wrapper = document.querySelector('#scrolling-icons-wrapper');
+    const carousel = document.querySelector('#batch-photo-carousel');
+    wrapper.style.width = `${wrapper.getBoundingClientRect().height * 5463 / 135}px`;
+    imageWidth = wrapper.getBoundingClientRect().width;
+}
 
 function animateScroll() {
     offset -= 1;
@@ -67,6 +73,34 @@ function animateScroll() {
     }
 
     requestAnimationFrame(animateScroll);
+}
+
+function closeMenu() {
+    const mobileMenuButton = document.querySelector("#mobile-menu-button");
+    const menuButton = document.querySelector("#menu-button");
+    const exitButton = document.querySelector("#exit-button");
+    const logo = document.querySelector("#main-logo");
+    const mobileMenu = document.querySelector("#mobile-menu");
+    mobileMenuButton.classList.remove("active")
+    menuButton.classList.remove("hidden")
+    exitButton.classList.add("hidden")
+    logo.classList.remove("hidden")
+    mobileMenu.classList.add("hidden")
+    console.log("menu closed")
+}
+
+function openMenu() {
+    const mobileMenuButton = document.querySelector("#mobile-menu-button");
+    const menuButton = document.querySelector("#menu-button");
+    const exitButton = document.querySelector("#exit-button");
+    const logo = document.querySelector("#main-logo");
+    const mobileMenu = document.querySelector("#mobile-menu");
+    mobileMenuButton.classList.add("active")
+    menuButton.classList.add("hidden")
+    exitButton.classList.remove("hidden")
+    logo.classList.add("hidden")
+    mobileMenu.classList.remove("hidden")
+    console.log("menu opened")
 }
 
 function plusSlides(n) {

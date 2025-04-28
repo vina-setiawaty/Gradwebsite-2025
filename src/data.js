@@ -1301,4 +1301,4 @@ const DESIGNER_DATA = [
     }
 ]
 
-export { DESIGNER_DATA}
+export { DESIGNER_DATA }

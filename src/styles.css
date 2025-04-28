@@ -114,7 +114,7 @@ body {
     transform: translateY(0);
 }
 
-.w3-animate-right,
-.w3-animate-left {
-    animation-duration: 1s !important;
+.stop-scrolling {
+    height: 100svh;
+    overflow: hidden;
 }
