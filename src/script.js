@@ -16,6 +16,42 @@ window.onload = () => {
     nextButton.addEventListener("click", (e) => { plusSlides(1) })
     showSlides(slideIndex);
     createDesignerCards();
+
+    const mobileMenuButton = document.querySelector("#mobile-menu-button");
+    mobileMenuButton.addEventListener("click", (e) => {
+        e.preventDefault();
+        const menuButton = document.querySelector("#menu-button");
+        const exitButton = document.querySelector("#exit-button");
+        const logo = document.querySelector("#main-logo");
+        const mobileMenu = document.querySelector("#mobile-menu");
+        if (mobileMenuButton.classList.contains("active")) {
+            mobileMenuButton.classList.remove("active")
+            menuButton.classList.remove("hidden")
+            exitButton.classList.add("hidden")
+            logo.classList.remove("hidden")
+            mobileMenu.classList.add("hidden")
+            console.log("menu closed")
+        } else {
+            mobileMenuButton.classList.add("active")
+            menuButton.classList.add("hidden")
+            exitButton.classList.remove("hidden")
+            logo.classList.add("hidden")
+            mobileMenu.classList.remove("hidden")
+            console.log("menu opened")
+        }
+    })
+
+    setTimeout(() => {
+        const mobileOpeningPage = document.querySelector("#mobile-opening-page")
+        mobileOpeningPage.classList.remove("opacity-100")
+        mobileOpeningPage.classList.add("opacity-0")
+        // mobileOpeningPage.classList.add("hidden")
+    }, 1500)
+    
+    setTimeout(() => {
+        const mobileOpeningPage = document.querySelector("#mobile-opening-page")
+        mobileOpeningPage.classList.add("hidden")
+    }, 2100)
 }
 
 
@@ -72,7 +108,7 @@ function createDesignerCards() {
         const card = document.createElement("div");
         card.classList.add("designer-card", "h-auto", "w-auto", "mx-2", "my-2");
         card.innerHTML = `
-            <img class="bg-blue h-[296px] w-[204px]" src="${designer.image}" alt="${designer.PreferredName}">
+            <img class="bg-blue aspect-3/4 w-[40vw] sm:h-[296px] sm:w-[204px]" src="${designer.image}" alt="${designer.PreferredName}">
             <p class="font-light font-secondary py-2">${designer.PreferredName}</h3>
         `;
         container.appendChild(card);
