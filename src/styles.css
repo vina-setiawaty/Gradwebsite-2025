@@ -79,8 +79,13 @@ html {
 @theme {
     --color-black: #000000;
     --color-offwhite: #F3F3F3;
+    --color-offwhite-translucent: #F3F3F380;
     --color-gray: #b3b3b3;
     --color-blue: #253465;
+    --color-red: #F7422C;
+    --color-orange: #D17A00;
+    --color-green: #7F7B00;
+    --color-salmon: #EEA9A9;
     --font-main: 'Nohemi', sans-serif;
     --font-secondary: 'Inter', sans-serif;
     --font-secondary-italic: 'Inter-Italic', sans-serif;
