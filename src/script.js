@@ -160,12 +160,15 @@ function showSlides(n) {
 
 function createDesignerCards() {
     const container = document.querySelector("#designer-cards-container");
-    DESIGNER_DATA.forEach((designer) => {
+    DESIGNER_DATA.forEach((designer, i) => {
+        const name = designer.PreferredName.replace(/\s/g, '');;
         const card = document.createElement("div");
         card.classList.add("designer-card", "h-auto", "w-auto", "mx-2", "my-2");
         card.innerHTML = `
+            <a href="./designer.html?designer=${name + "-" + i}"> 
             <img class="bg-blue aspect-3/4 w-[40vw] sm:h-[296px] sm:w-[204px]" src="${designer.image}" alt="${designer.PreferredName}">
-            <p class="font-light font-secondary py-2">${designer.PreferredName}</h3>
+            <p class="font-light font-secondary py-2">${designer.PreferredName}</p>
+            </a>
         `;
         container.appendChild(card);
     });

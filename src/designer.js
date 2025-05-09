@@ -2,6 +2,15 @@ import { DESIGNER_DATA } from "./data.js";
 
 window.onload = () => {
     // animateScroll();
+    const params = new URLSearchParams(window.location.search);
+    console.log(params);
+    let index = 0;
+
+    if (params.get("designer")) {
+       index = parseInt(params.get("designer").split("-")[1]);
+    }
+
+    loadContent(index);
 
     const mobileMenuButton = document.querySelector("#mobile-menu-button");
     mobileMenuButton.addEventListener("click", (e) => {
@@ -96,6 +105,17 @@ function openMenu() {
     mobileMenu.classList.add("h-[100svh]")
     mobileMenu.classList.add("opacity-100")
     console.log("menu opened")
+}
+
+function loadContent(index) {
+    const name_container = document.querySelector("#designer-name");
+    name_container.innerHTML = DESIGNER_DATA[index].PreferredName; 
+
+    const intro_container = document.querySelector("#intro-text");
+    intro_container.innerHTML = DESIGNER_DATA[index]["Personal Description"];
+
+    const icon_intro_container = document.querySelector("#icon-intro-text");
+    icon_intro_container.innerHTML = DESIGNER_DATA[index]["Icon Description"];
 }
 
 document.addEventListener('DOMContentLoaded', function () {
