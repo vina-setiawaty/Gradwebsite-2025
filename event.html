@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./src/styles.css">
     <script src="./src/data.js" type="module"></script>
-    <script src="./src/script.js" type="module" defer></script>
+    <script src="./src/event.js" type="module" defer></script>
     <link href="./src/output.css" rel="stylesheet">
     <link href="./src/styles.css" rel="stylesheet">
     <title>DID 25</title>
@@ -41,12 +41,12 @@
                     <div class="hidden sm:ml-6 sm:block">
                         <div class="flex space-x-8 md:space-x-16">
                             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                            <a href="./index.html#batch-introduction"
+                            <a href="./index.html"
                                 class="relative inline-block text-black after:absolute after:left-1/2 after:bottom-0 after:h-[1px] after:w-0 after:-translate-x-1/2 after:bg-black after:transition-all after:duration-300 hover:after:w-full py-1 text-xl font-light text-black"
                                 aria-current="page">Our Batch</a>
                             <a href="#"
                                 class="relative inline-block text-black after:absolute after:left-1/2 after:bottom-0 after:h-[1px] after:w-0 after:-translate-x-1/2 after:bg-black after:transition-all after:duration-300 hover:after:w-full py-1 text-xl font-light text-black">Gradbook</a>
-                            <a href="#"
+                            <a href="./event.html"
                                 class="relative inline-block text-black after:absolute after:left-1/2 after:bottom-0 after:h-[1px] after:w-0 after:-translate-x-1/2 after:bg-black after:transition-all after:duration-300 hover:after:w-full py-1 text-xl font-light text-black">Event
                                 Details</a>
                             <a href="https://cde.nus.edu.sg/did/" target="_blank"
@@ -57,16 +57,15 @@
                 </div>
                 <div id="mobile-menu-button" class="absolute inset-y-0 right-0 flex items-center sm:hidden">
                     <!-- Mobile menu button-->
-                    <button type="button" 
-                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white"
+                    <button type="button"
+                        class="relative inline-flex items-center justify-center rounded-md p-4 text-gray-400"
                         aria-controls="mobile-menu" aria-expanded="false">
-                        <span class="absolute -inset-0.5"></span>
                         <span class="sr-only">Open main menu</span>
-                        <img id="menu-button" src="./assets/navigation_bar.svg" alt="hamburger" class="block h-6 w-6" aria-hidden="true"
-                            data-slot="icon">
+                        <img id="menu-button" src="./assets/navigation_bar.svg" alt="hamburger"
+                            class="absolute opacity-100 ease-in-out transition-all duration-500 scale-100 h-16 w-16" aria-hidden="true" data-slot="icon">
 
-                        <img id="exit-button" src="./assets/exit_button.svg" alt="exit" class="hidden h-6 w-6" aria-hidden="true"
-                            data-slot="icon">
+                        <img id="exit-button" src="./assets/exit_button.svg" alt="exit" class="absolute opacity-0 ease-in-out transition-all duration-500 scale-20 h-16 w-16"
+                            aria-hidden="true" data-slot="icon">
                     </button>
                 </div>
             </div>
@@ -74,15 +73,15 @@
         </div>
 
         <!-- Mobile menu, show/hide based on menu state. -->
-        <div class="hidden sm:hidden h-[100vh] fade-in" id="mobile-menu">
+        <div class="block h-[0svh] overflow-hidden sm:hidden transition-all ease-in-out duration-500 opacity-0" id="mobile-menu">
             <div class="flex flex-col items-center h-[70%] space-y-1 px-2 pt-2 pb-3">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a href="./index.html#batch-introduction"
+                <a href="./index.html"
                     class="mobile-menu-options relative inline-block text-black after:absolute pt-16 after:left-1/2 after:bottom-0 after:h-[1px] after:w-0 after:-translate-x-1/2 after:bg-black after:transition-all after:duration-300 hover:after:w-full py-1 text-xl font-light text-black"
                     aria-current="page">Our Batch</a>
                 <a href="#"
                     class="mobile-menu-options relative inline-block text-black after:absolute pt-16 after:left-1/2 after:bottom-0 after:h-[1px] after:w-0 after:-translate-x-1/2 after:bg-black after:transition-all after:duration-300 hover:after:w-full py-1 text-xl font-light text-black">Gradbook</a>
-                <a href="#"
+                <a href="./event.html"
                     class="mobile-menu-options relative inline-block text-black after:absolute pt-16 after:left-1/2 after:bottom-0 after:h-[1px] after:w-0 after:-translate-x-1/2 after:bg-black after:transition-all after:duration-300 hover:after:w-full py-1 text-xl font-light text-black">Event
                     Details</a>
                 <a href="https://cde.nus.edu.sg/did/" target="_blank"
@@ -114,7 +113,7 @@
             </div>
         </div>
 
-        <div id="getting-here" class="flex flex-col mt-42 lg:mt-0 px-8 lg:pl-16 xl:pl-24 w-screen lg:w-[70%]">
+        <div id="getting-here" class="flex flex-col mt-42 lg:mt-0 px-8 lg:pl-16 xl:pl-24 w-screen lg:w-[70%] scroll-mt-50 lg:scroll-mt-32">
             <div class="flex flex-col w-full mx-auto py-8 md:pt-16 max-w-7xl fade-in">
                 <p class="text-2xl/6 mb-4 md:text-3xl/6">Getting Here</p>
                 <p class="text-md/2 font-secondary font-medium md:font-light lg:w-[80%] md:text-xl/8 sm:w-[70%]">Come find us at SDE4, 8 Architecture Dr, 117356. The NUS DID Graduation Show will be held at Level 5.</p>    
@@ -160,13 +159,13 @@
         <div class="hidden md:block h-48 overflow-hidden relative flex fade-in">
             <div id="scrolling-icons-wrapper" class="absolute h-full flex animate-scroll whitespace-nowrap">
                 <img id="scrolling-icons-desktop-1" src="./assets/desktop-landing-icons.svg" alt="batch_logos"
-                    class="h-full w-auto object-cover">
+                    class="icons-images h-full w-auto object-cover">
                 <img id="scrolling-icons-desktop-2" src="./assets/desktop-landing-icons.svg" alt="batch_logos"
-                    class="h-full w-auto object-cover">
+                    class="icons-images h-full w-auto object-cover">
             </div>
         </div>
 
-        <div id="event-layout" class="flex flex-col px-8 lg:pl-16 xl:pl-24 w-screen lg:w-[70%]">
+        <div id="event-layout" class="flex flex-col px-8 lg:pl-16 xl:pl-24 w-screen lg:w-[70%] scroll-mt-50 lg:scroll-mt-32">
             <div class="flex flex-col w-full mx-auto py-8 lg:pt-16 xl:pt-24 md:pt-16 max-w-7xl fade-in">
                 <p class="text-2xl/6 mb-4 md:text-3xl/6">Event Layout</p>
                 <p class="text-md/2 font-secondary font-medium md:font-light lg:w-[80%] md:text-xl/8 sm:w-[70%]">This show is divided by 5 different clusters.<br>Refer to the following layout for ease of exploration.</p>    

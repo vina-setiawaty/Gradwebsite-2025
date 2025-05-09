@@ -1,3 +1,5 @@
+import { DESIGNER_DATA } from "./data.js";
+
 window.onload = () => {
     // animateScroll();
 
@@ -11,14 +13,40 @@ window.onload = () => {
         }
     })
 
-    const mobileMenuOptions = document.querySelectorAll(".mobile-menu-options")
-    mobileMenuOptions.forEach((option) => {
-        option.addEventListener("click", (e) => {
-            e.preventDefault();
-            console.log("clicked option")
-            closeMenu();
-        })
-    })
+    const arrowBtn = document.getElementById("page-arrow-img");
+    const targetSection = document.getElementById("designer-projects");
+    let pointingDown = true; // initial state
+
+    // IntersectionObserver to watch if target section is in view
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // If target is in view, arrow points UP
+                arrowBtn.classList.remove("rotate-0");
+                arrowBtn.classList.add("rotate-180");
+                
+                pointingDown = false;
+                console.log("Arrow pointing UP");
+            } else {
+                // Else, arrow points DOWN
+                arrowBtn.classList.remove("rotate-180");
+                arrowBtn.classList.add("rotate-0");
+                pointingDown = true;
+            }
+        });
+    });
+
+    observer.observe(targetSection);
+
+    // Click behavior
+    arrowBtn.addEventListener("click", () => {
+        if (pointingDown) {
+            targetSection.scrollIntoView({ behavior: "smooth" });
+        } else {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    });
+
 }
 
 
@@ -29,10 +57,20 @@ function closeMenu() {
     const logo = document.querySelector("#main-logo");
     const mobileMenu = document.querySelector("#mobile-menu");
     mobileMenuButton.classList.remove("active")
-    menuButton.classList.remove("hidden")
-    exitButton.classList.add("hidden")
+    // menuButton.classList.remove("hidden")
+    // exitButton.classList.add("hidden")
+
+    exitButton.classList.remove("opacity-100", "scale-100");
+    exitButton.classList.add("opacity-0", "scale-20");
+
+    menuButton.classList.remove("opacity-0", "scale-20");
+    menuButton.classList.add("opacity-100", "scale-100");
+
     logo.classList.remove("hidden")
-    mobileMenu.classList.add("hidden")
+    mobileMenu.classList.remove("h-[100svh]")
+    mobileMenu.classList.remove("opacity-100")
+    mobileMenu.classList.add("h-[0svh]")
+    mobileMenu.classList.add("opacity-0")
     console.log("menu closed")
 }
 
@@ -43,10 +81,20 @@ function openMenu() {
     const logo = document.querySelector("#main-logo");
     const mobileMenu = document.querySelector("#mobile-menu");
     mobileMenuButton.classList.add("active")
-    menuButton.classList.add("hidden")
-    exitButton.classList.remove("hidden")
+    // menuButton.classList.add("hidden")
+    // exitButton.classList.remove("hidden")
+
+    exitButton.classList.remove("opacity-0", "scale-20");
+    exitButton.classList.add("opacity-100", "scale-100");
+
+    menuButton.classList.remove("opacity-100", "scale-100");
+    menuButton.classList.add("opacity-0", "scale-20");
+
     logo.classList.add("hidden")
-    mobileMenu.classList.remove("hidden")
+    mobileMenu.classList.remove("h-[0svh]")
+    mobileMenu.classList.remove("opacity-0")
+    mobileMenu.classList.add("h-[100svh]")
+    mobileMenu.classList.add("opacity-100")
     console.log("menu opened")
 }
 

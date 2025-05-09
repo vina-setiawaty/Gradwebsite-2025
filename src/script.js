@@ -27,14 +27,16 @@ window.onload = () => {
         }
     })
 
-    const mobileMenuOptions = document.querySelectorAll(".mobile-menu-options")
-    mobileMenuOptions.forEach((option) => {
-        option.addEventListener("click", (e) => {
-            e.preventDefault();
-            console.log("clicked option")
-            closeMenu();
-        })
+    const batchIntroduction = document.querySelector("#batch-introduction")
+
+    const option = document.querySelector("#mobile-menu-batch-introduction")
+    option.addEventListener("click", (e) => {
+        e.preventDefault();
+        console.log("clicked option")
+        batchIntroduction.scrollIntoView({ behavior: "smooth" });
+        closeMenu();
     })
+
 
     handlePicResize();
 
@@ -82,10 +84,20 @@ function closeMenu() {
     const logo = document.querySelector("#main-logo");
     const mobileMenu = document.querySelector("#mobile-menu");
     mobileMenuButton.classList.remove("active")
-    menuButton.classList.remove("hidden")
-    exitButton.classList.add("hidden")
+    // menuButton.classList.remove("hidden")
+    // exitButton.classList.add("hidden")
+
+    exitButton.classList.remove("opacity-100", "scale-100");
+    exitButton.classList.add("opacity-0", "scale-20");
+
+    menuButton.classList.remove("opacity-0", "scale-20");
+    menuButton.classList.add("opacity-100", "scale-100");
+
     logo.classList.remove("hidden")
-    mobileMenu.classList.add("hidden")
+    mobileMenu.classList.remove("h-[100svh]")
+    mobileMenu.classList.remove("opacity-100")
+    mobileMenu.classList.add("h-[0svh]")
+    mobileMenu.classList.add("opacity-0")
     console.log("menu closed")
 }
 
@@ -96,10 +108,20 @@ function openMenu() {
     const logo = document.querySelector("#main-logo");
     const mobileMenu = document.querySelector("#mobile-menu");
     mobileMenuButton.classList.add("active")
-    menuButton.classList.add("hidden")
-    exitButton.classList.remove("hidden")
+    // menuButton.classList.add("hidden")
+    // exitButton.classList.remove("hidden")
+
+    exitButton.classList.remove("opacity-0", "scale-20");
+    exitButton.classList.add("opacity-100", "scale-100");
+
+    menuButton.classList.remove("opacity-100", "scale-100");
+    menuButton.classList.add("opacity-0", "scale-20");
+
     logo.classList.add("hidden")
-    mobileMenu.classList.remove("hidden")
+    mobileMenu.classList.remove("h-[0svh]")
+    mobileMenu.classList.remove("opacity-0")
+    mobileMenu.classList.add("h-[100svh]")
+    mobileMenu.classList.add("opacity-100")
     console.log("menu opened")
 }
 

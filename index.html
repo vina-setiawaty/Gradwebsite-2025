@@ -57,16 +57,15 @@
                 </div>
                 <div id="mobile-menu-button" class="absolute inset-y-0 right-0 flex items-center sm:hidden">
                     <!-- Mobile menu button-->
-                    <button type="button" 
-                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white"
+                    <button type="button"
+                        class="relative inline-flex items-center justify-center rounded-md p-4 text-gray-400"
                         aria-controls="mobile-menu" aria-expanded="false">
-                        <span class="absolute -inset-0.5"></span>
                         <span class="sr-only">Open main menu</span>
-                        <img id="menu-button" src="./assets/navigation_bar.svg" alt="hamburger" class="block h-6 w-6" aria-hidden="true"
-                            data-slot="icon">
+                        <img id="menu-button" src="./assets/navigation_bar.svg" alt="hamburger"
+                            class="absolute opacity-100 ease-in-out transition-all duration-500 scale-100 h-16 w-16" aria-hidden="true" data-slot="icon">
 
-                        <img id="exit-button" src="./assets/exit_button.svg" alt="exit" class="hidden h-6 w-6" aria-hidden="true"
-                            data-slot="icon">
+                        <img id="exit-button" src="./assets/exit_button.svg" alt="exit" class="absolute opacity-0 ease-in-out transition-all duration-500 scale-20 h-16 w-16"
+                            aria-hidden="true" data-slot="icon">
                     </button>
                 </div>
             </div>
@@ -74,10 +73,10 @@
         </div>
 
         <!-- Mobile menu, show/hide based on menu state. -->
-        <div class="hidden sm:hidden h-[100vh] fade-in" id="mobile-menu">
+        <div class="block h-[0svh] overflow-hidden sm:hidden transition-all ease-in-out duration-500 opacity-0" id="mobile-menu">
             <div class="flex flex-col items-center h-[70%] space-y-1 px-2 pt-2 pb-3">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                <a href="#batch-introduction"
+                <a id="mobile-menu-batch-introduction" href="#batch-introduction"
                     class="mobile-menu-options relative inline-block text-black after:absolute pt-16 after:left-1/2 after:bottom-0 after:h-[1px] after:w-0 after:-translate-x-1/2 after:bg-black after:transition-all after:duration-300 hover:after:w-full py-1 text-xl font-light text-black"
                     aria-current="page">Our Batch</a>
                 <a href="#"
@@ -118,9 +117,9 @@
         <div class="hidden md:block h-48 overflow-hidden relative flex fade-in">
             <div id="scrolling-icons-wrapper" class="absolute h-full flex animate-scroll whitespace-nowrap">
                 <img id="scrolling-icons-desktop-1" src="./assets/desktop-landing-icons.svg" alt="batch_logos"
-                    class="h-full w-auto object-cover">
+                    class="icons-images h-full w-auto object-cover">
                 <img id="scrolling-icons-desktop-2" src="./assets/desktop-landing-icons.svg" alt="batch_logos"
-                    class="h-full w-auto object-cover">
+                    class="icons-images h-full w-auto object-cover">
             </div>
         </div>
     </div>
@@ -184,7 +183,7 @@
         </div>
 
         <div id="batch-introduction"
-            class="flex flex-col w-full mx-auto py-8 sm:py-16 md:py-24 max-w-7xl px-8 lg:max-w-[80%] fade-in">
+            class="flex flex-col w-full mx-auto py-8 sm:py-16 md:py-24 max-w-7xl px-8 lg:max-w-[80%] fade-in scroll-mt-16 md:scroll-mt-32">
             <p class="text-md/2 font-secondary font-medium md:font-light mb-8 md:text-xl/8 lg:w-[70%]">In the space between uncertainty
                 and clarity, each of us found a voice. Through late nights, countless revisions, and quiet moments of
                 doubt, we shaped ideas into impact.</p>
