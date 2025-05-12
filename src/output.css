@@ -382,6 +382,9 @@
   .h-full {
     height: 100%;
   }
+  .h-screen {
+    height: 100vh;
+  }
   .w-3 {
     width: calc(var(--spacing) * 3);
   }
@@ -402,9 +405,6 @@
   }
   .w-\[80\%\] {
     width: 80%;
-  }
-  .w-\[100vw\] {
-    width: 100vw;
   }
   .w-auto {
     width: auto;
@@ -501,9 +501,6 @@
   .scroll-mt-16 {
     scroll-margin-top: calc(var(--spacing) * 16);
   }
-  .scroll-mt-32 {
-    scroll-margin-top: calc(var(--spacing) * 32);
-  }
   .scroll-mt-50 {
     scroll-margin-top: calc(var(--spacing) * 50);
   }
@@ -572,6 +569,9 @@
   }
   .gap-y-8 {
     row-gap: calc(var(--spacing) * 8);
+  }
+  .overflow-auto {
+    overflow: auto;
   }
   .overflow-hidden {
     overflow: hidden;
@@ -1048,6 +1048,11 @@
   .md\:h-24 {
     @media (width >= 48rem) {
       height: calc(var(--spacing) * 24);
+    }
+  }
+  .md\:h-\[0px\] {
+    @media (width >= 48rem) {
+      height: 0px;
     }
   }
   .md\:h-screen {
@@ -1595,7 +1600,6 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #333;
-  overflow: auto;
 }
 .fade-in {
   opacity: 0;

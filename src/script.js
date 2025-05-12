@@ -9,7 +9,37 @@ wrapper.style.width = `${wrapper.getBoundingClientRect().height * 5463 / 135}px`
 let imageWidth = wrapper.getBoundingClientRect().width;
 
 window.onload = () => {
+    // Check if the user has already visited once, if not, show the opening page
+    if (sessionStorage.getItem("visited")) {
+        const mobileOpeningPage = document.querySelector("#mobile-opening-page")
+        mobileOpeningPage.classList.add("hidden")
+    } else {
+        const mobileOpeningPage = document.querySelector("#mobile-opening-page")
+        mobileOpeningPage.classList.remove("hidden")
+        document.querySelector("body").classList.remove("overflow-auto");
+        document.querySelector("body").classList.add("h-screen");
+        document.querySelector("body").classList.add("overflow-hidden");
+
+        setTimeout(() => {
+            const mobileOpeningPage = document.querySelector("#mobile-opening-page")
+            mobileOpeningPage.classList.remove("opacity-100")
+            mobileOpeningPage.classList.add("opacity-0")
+            // mobileOpeningPage.classList.add("hidden")
+        }, 1750)
+
+        setTimeout(() => {
+            document.querySelector("body").classList.remove("h-screen");
+            document.querySelector("body").classList.remove("overflow-hidden");
+            document.querySelector("body").classList.add("overflow-auto");
+            const mobileOpeningPage = document.querySelector("#mobile-opening-page")
+            mobileOpeningPage.classList.add("hidden")
+        }, 2300)
+
+        sessionStorage.setItem("visited", "true");
+    }
+
     animateScroll();
+
     const prevButton = document.querySelector("#prev-button")
     prevButton.addEventListener("click", (e) => { plusSlides(-1) })
     const nextButton = document.querySelector("#next-button")
@@ -42,17 +72,6 @@ window.onload = () => {
 
     window.addEventListener("resize", handlePicResize);
 
-    setTimeout(() => {
-        const mobileOpeningPage = document.querySelector("#mobile-opening-page")
-        mobileOpeningPage.classList.remove("opacity-100")
-        mobileOpeningPage.classList.add("opacity-0")
-        // mobileOpeningPage.classList.add("hidden")
-    }, 1500)
-
-    setTimeout(() => {
-        const mobileOpeningPage = document.querySelector("#mobile-opening-page")
-        mobileOpeningPage.classList.add("hidden")
-    }, 2100)
 }
 
 function handlePicResize() {
@@ -180,7 +199,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const observerOptions = {
         root: null, // Use the viewport as the container
         rootMargin: '0px',
-        threshold: 0.1 // Trigger when 10% of the element is in the viewport
+        threshold: 0.1 //Trigger when 10% of the element is in the viewport
+    };
+
+    const observerOptionsCards = {
+        root: null, // Use the viewport as the container
+        rootMargin: '0px',
+        threshold: 0.03 //Trigger when 10% of the element is in the viewport
     };
 
     const fadeInElements = document.querySelectorAll('.fade-in');
@@ -194,12 +219,25 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }, observerOptions);
 
+    const observerCards = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Stop observing once it's visible
+            }
+        });
+    }, observerOptionsCards);
+
     fadeInElements.forEach(element => {
         // Check if the element is already in the viewport
         if (element.getBoundingClientRect().top < window.innerHeight) {
             element.classList.add('visible');
         } else {
-            observer.observe(element);
+            if (element.id == "designer-cards-container") {
+                observerCards.observe(element);
+            } else {
+                observer.observe(element);
+            }
         }
     });
 });
