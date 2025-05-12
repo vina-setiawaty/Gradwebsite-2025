@@ -1,7 +1,6 @@
 import { DESIGNER_DATA } from "./data.js";
 
 window.onload = () => {
-    // animateScroll();
     const params = new URLSearchParams(window.location.search);
     console.log(params);
     let index = 0;

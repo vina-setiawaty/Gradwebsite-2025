@@ -9,8 +9,10 @@ wrapper.style.width = `${wrapper.getBoundingClientRect().height * 5463 / 135}px`
 let imageWidth = wrapper.getBoundingClientRect().width;
 
 window.onload = () => {
-    // Check if the user has already visited once, if not, show the opening page
-    if (sessionStorage.getItem("visited")) {
+
+    // Check if the user visiting from the top of the page
+    // If so, show the mobile opening page
+    if (document.querySelector("body").getBoundingClientRect().top < 0) {
         const mobileOpeningPage = document.querySelector("#mobile-opening-page")
         mobileOpeningPage.classList.add("hidden")
     } else {
@@ -35,7 +37,6 @@ window.onload = () => {
             mobileOpeningPage.classList.add("hidden")
         }, 2300)
 
-        sessionStorage.setItem("visited", "true");
     }
 
     animateScroll();
