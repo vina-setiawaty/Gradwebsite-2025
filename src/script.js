@@ -12,33 +12,33 @@ window.onload = () => {
 
     // Check if the user visiting from the top of the page
     // If so, show the mobile opening page
-    if (document.querySelector("body").getBoundingClientRect().top < 0) {
-        const mobileOpeningPage = document.querySelector("#mobile-opening-page")
-        mobileOpeningPage.classList.add("hidden")
-    } else {
-        if (window.innerWidth < 768) {
-            const mobileOpeningPage = document.querySelector("#mobile-opening-page")
-            mobileOpeningPage.classList.remove("hidden")
-            document.querySelector("body").classList.remove("overflow-auto");
-            document.querySelector("body").classList.add("h-screen");
-            document.querySelector("body").classList.add("overflow-hidden");
+    // if (document.querySelector("body").getBoundingClientRect().top < 0) {
+    //     const mobileOpeningPage = document.querySelector("#mobile-opening-page")
+    //     mobileOpeningPage.classList.add("hidden")
+    // } else {
+    //     if (window.innerWidth < 768) {
+    //         const mobileOpeningPage = document.querySelector("#mobile-opening-page")
+    //         mobileOpeningPage.classList.remove("hidden")
+    //         document.querySelector("body").classList.remove("overflow-auto");
+    //         document.querySelector("body").classList.add("h-screen");
+    //         document.querySelector("body").classList.add("overflow-hidden");
 
-            setTimeout(() => {
-                const mobileOpeningPage = document.querySelector("#mobile-opening-page")
-                mobileOpeningPage.classList.remove("opacity-100")
-                mobileOpeningPage.classList.add("opacity-0")
-                // mobileOpeningPage.classList.add("hidden")
-            }, 1750)
+    //         setTimeout(() => {
+    //             const mobileOpeningPage = document.querySelector("#mobile-opening-page")
+    //             mobileOpeningPage.classList.remove("opacity-100")
+    //             mobileOpeningPage.classList.add("opacity-0")
+    //             // mobileOpeningPage.classList.add("hidden")
+    //         }, 1750)
 
-            setTimeout(() => {
-                document.querySelector("body").classList.remove("h-screen");
-                document.querySelector("body").classList.remove("overflow-hidden");
-                document.querySelector("body").classList.add("overflow-auto");
-                const mobileOpeningPage = document.querySelector("#mobile-opening-page")
-                mobileOpeningPage.classList.add("hidden")
-            }, 2300)
-        }
-    }
+    //         setTimeout(() => {
+    //             document.querySelector("body").classList.remove("h-screen");
+    //             document.querySelector("body").classList.remove("overflow-hidden");
+    //             document.querySelector("body").classList.add("overflow-auto");
+    //             const mobileOpeningPage = document.querySelector("#mobile-opening-page")
+    //             mobileOpeningPage.classList.add("hidden")
+    //         }, 2300)
+    //     }
+    // }
 
     animateScroll();
 
