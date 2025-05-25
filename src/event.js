@@ -1,7 +1,7 @@
 let offset = 0;
 const wrapper = document.querySelector('#scrolling-icons-wrapper');
 const images = wrapper.querySelectorAll('img');
-wrapper.style.width = `${wrapper.getBoundingClientRect().height * 5463 / 135}px`;
+wrapper.style.width = `${wrapper.getBoundingClientRect().height * 5472 / 155}px`;
 let imageWidth = wrapper.getBoundingClientRect().width;
 
 window.onload = () => {

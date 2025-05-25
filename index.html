@@ -14,7 +14,8 @@
 </head>
 
 <body class="bg-offwhite overflow-auto">
-    <div id="mobile-opening-page" class="bg-offwhite z-200 absolute w-full h-[100svh] flex flex-col hidden md:h-[0px] opacity-100 transition-all duration-500">
+    <div id="mobile-opening-page"
+        class="bg-offwhite z-200 absolute w-full h-[100svh] flex flex-col hidden md:h-[0px] opacity-100 transition-all duration-500">
         <div class="flex flex-none grow-0 w-auto h-auto justify-start items-center block">
             <img src="./assets/website_header.svg" alt="DID 25" id="website-header-img"
                 class="h-auto mx-auto px-12 pt-12 mb-4">
@@ -26,54 +27,58 @@
     </div>
     <nav class="bg-offwhite border-b-1 border-black absolute fixed w-full z-100">
         <div class="border-b-1 border-black">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 xl:max-w-[90%]">
-            <!-- full container, 80% when larger than 1280, px changes the padding-->
-            <div class="relative flex h-16 md:h-24 items-center justify-between">
-                <div class="flex flex-1 items-center sm:items-stretch sm:justify-start">
-                    <div class="flex shrink-0 items-center">
-                        <a href="./index.html">
-                            <img id="main-logo" class="h-8 sm:h-12 w-auto" src="./assets/25_logo.svg" alt="DID 25">
-                        </a>
-                    </div>
+            <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 xl:max-w-[90%]">
+                <!-- full container, 80% when larger than 1280, px changes the padding-->
+                <div class="relative flex h-16 md:h-24 items-center justify-between">
+                    <div class="flex flex-1 items-center sm:items-stretch sm:justify-start">
+                        <div class="flex shrink-0 items-center">
+                            <a href="./index.html">
+                                <img id="main-logo" class="h-8 sm:h-12 w-auto" src="./assets/25_logo.svg" alt="DID 25">
+                            </a>
+                        </div>
 
-                </div>
-                <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                    <div class="hidden sm:ml-6 sm:block">
-                        <div class="flex space-x-8 md:space-x-16">
-                            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
-                            <a href="#batch-introduction"
-                                class="relative inline-block text-black after:absolute after:left-1/2 after:bottom-0 after:h-[1px] after:w-0 after:-translate-x-1/2 after:bg-black after:transition-all after:duration-300 hover:after:w-full py-1 text-xl font-light text-black"
-                                aria-current="page">Our Batch</a>
-                            <a href="#"
-                                class="relative inline-block text-black after:absolute after:left-1/2 after:bottom-0 after:h-[1px] after:w-0 after:-translate-x-1/2 after:bg-black after:transition-all after:duration-300 hover:after:w-full py-1 text-xl font-light text-black">Gradbook</a>
-                            <a href="./event.html"
-                                class="relative inline-block text-black after:absolute after:left-1/2 after:bottom-0 after:h-[1px] after:w-0 after:-translate-x-1/2 after:bg-black after:transition-all after:duration-300 hover:after:w-full py-1 text-xl font-light text-black">Event
-                                Details</a>
-                            <a href="https://cde.nus.edu.sg/did/" target="_blank"
-                                class="relative inline-block text-black after:absolute after:left-1/2 after:bottom-0 after:h-[1px] after:w-0 after:-translate-x-1/2 after:bg-black after:transition-all after:duration-300 hover:after:w-full py-1 text-xl font-light text-black">About
-                                DID</a>
+                    </div>
+                    <div
+                        class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                        <div class="hidden sm:ml-6 sm:block">
+                            <div class="flex space-x-8 md:space-x-16">
+                                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                                <a href="#batch-introduction"
+                                    class="relative inline-block text-black after:absolute after:left-1/2 after:bottom-0 after:h-[1px] after:w-0 after:-translate-x-1/2 after:bg-black after:transition-all after:duration-300 hover:after:w-full py-1 text-xl font-light text-black"
+                                    aria-current="page">Our Batch</a>
+                                <a href="#"
+                                    class="relative inline-block text-black after:absolute after:left-1/2 after:bottom-0 after:h-[1px] after:w-0 after:-translate-x-1/2 after:bg-black after:transition-all after:duration-300 hover:after:w-full py-1 text-xl font-light text-black">Gradbook</a>
+                                <a href="./event.html"
+                                    class="relative inline-block text-black after:absolute after:left-1/2 after:bottom-0 after:h-[1px] after:w-0 after:-translate-x-1/2 after:bg-black after:transition-all after:duration-300 hover:after:w-full py-1 text-xl font-light text-black">Event
+                                    Details</a>
+                                <a href="https://cde.nus.edu.sg/did/" target="_blank"
+                                    class="relative inline-block text-black after:absolute after:left-1/2 after:bottom-0 after:h-[1px] after:w-0 after:-translate-x-1/2 after:bg-black after:transition-all after:duration-300 hover:after:w-full py-1 text-xl font-light text-black">About
+                                    DID</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div id="mobile-menu-button" class="absolute inset-y-0 right-0 flex items-center sm:hidden">
-                    <!-- Mobile menu button-->
-                    <button type="button"
-                        class="relative inline-flex items-center justify-center rounded-md p-4 text-gray-400"
-                        aria-controls="mobile-menu" aria-expanded="false">
-                        <span class="sr-only">Open main menu</span>
-                        <img id="menu-button" src="./assets/navigation_bar.svg" alt="hamburger"
-                            class="absolute opacity-100 ease-in-out transition-all duration-500 scale-100 h-16 w-16" aria-hidden="true" data-slot="icon">
+                    <div id="mobile-menu-button" class="absolute inset-y-0 right-0 flex items-center sm:hidden">
+                        <!-- Mobile menu button-->
+                        <button type="button"
+                            class="relative inline-flex items-center justify-center rounded-md p-4 text-gray-400"
+                            aria-controls="mobile-menu" aria-expanded="false">
+                            <span class="sr-only">Open main menu</span>
+                            <img id="menu-button" src="./assets/navigation_bar.svg" alt="hamburger"
+                                class="absolute opacity-100 ease-in-out transition-all duration-500 scale-100 h-16 w-16"
+                                aria-hidden="true" data-slot="icon">
 
-                        <img id="exit-button" src="./assets/exit_button.svg" alt="exit" class="absolute opacity-0 ease-in-out transition-all duration-500 scale-20 h-16 w-16"
-                            aria-hidden="true" data-slot="icon">
-                    </button>
+                            <img id="exit-button" src="./assets/exit_button.svg" alt="exit"
+                                class="absolute opacity-0 ease-in-out transition-all duration-500 scale-20 h-16 w-16"
+                                aria-hidden="true" data-slot="icon">
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
 
         <!-- Mobile menu, show/hide based on menu state. -->
-        <div class="block h-[0svh] overflow-hidden sm:hidden transition-all ease-in-out duration-500 opacity-0" id="mobile-menu">
+        <div class="block h-[0svh] overflow-hidden sm:hidden transition-all ease-in-out duration-500 opacity-0"
+            id="mobile-menu">
             <div class="flex flex-col items-center h-[70%] space-y-1 px-2 pt-2 pb-3">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                 <a id="mobile-menu-batch-introduction" href="#batch-introduction"
@@ -94,9 +99,9 @@
     <div id="landing-page" class="flex flex-col h-auto md:h-screen w-full justify-between pt-16 md:pt-24">
         <div id="landing-page-desktop-header"
             class="flex flex-col md:flex-row md:items-center md:justify-center w-full h-auto mx-auto max-w-7xl px-8 lg:max-w-[80%] pt-8 fade-in">
-            <div class="flex-1 justify-start items-center mt-4 mb-8 md:my-16">
+            <div class="flex-1 justify-start items-center pt-20 mb-8 md:my-16">
                 <img src="./assets/website_header.svg" alt="DID 25" id="website-header-img"
-                    class="h-auto w-[80%] max-w-md object-contain mb-4 sm:w-[60%]">
+                    class="h-auto w-full max-w-md object-contain mb-4 sm:w-[60%]">
             </div>
             <div class="flex-1 justify-start items-center my-auto ">
                 <div>
@@ -109,16 +114,17 @@
                 </div>
                 <div>
                     <p class="text-2xl/6 font-medium mb-2 md:text-3xl/6">Location</p>
-                    <p class="text-sm/6 sm:text-md/6 font-light md:text-2xl/6">SDE 4, Level 5, National University of Singapore<br>
+                    <p class="text-sm/6 sm:text-md/6 font-light md:text-2xl/6">SDE 4, Level 5, National University of
+                        Singapore<br>
                         8 Architecture Dr, Singapore 117564</p>
                 </div>
             </div>
         </div>
-        <div class="mt-8 md:mt-0 block h-48 overflow-hidden relative flex fade-in">
+        <div class="mt-8 md:mt-0 block h-32 md:h-48 overflow-hidden relative flex fade-in">
             <div id="scrolling-icons-wrapper" class="absolute h-full flex animate-scroll whitespace-nowrap">
-                <img id="scrolling-icons-desktop-1" src="./assets/desktop-landing-icons.svg" alt="batch_logos"
+                <img id="scrolling-icons-desktop-1" src="./assets/Motif Carousel.svg" alt="batch_logos"
                     class="icons-images h-full w-auto object-cover">
-                <img id="scrolling-icons-desktop-2" src="./assets/desktop-landing-icons.svg" alt="batch_logos"
+                <img id="scrolling-icons-desktop-2" src="./assets/Motif Carousel.svg" alt="batch_logos"
                     class="icons-images h-full w-auto object-cover">
             </div>
         </div>
@@ -133,29 +139,79 @@
             <img src="./assets/landing-page-batch-photo.png" alt="batch_photo" class="h-auto w-full object-cover">
         </div>
         <div class="flex flex-col w-full mx-auto py-8 sm:py-16 md:py-24 max-w-7xl px-8 lg:max-w-[80%] fade-in">
-            <p class="text-md/2 font-secondary font-medium md:font-light w-full mb-8 md:text-xl/10 sm:w-[70%]">A quiet tension drives our
+            <p class="text-md/2 font-secondary font-medium md:font-light w-full mb-8 md:text-xl/10 sm:w-[70%]">A quiet
+                tension drives our
                 self-discovery—balancing authenticity with the unknown as we search for our place in a noisy world.</p>
             <p class="text-2xl/6 font-medium mb-2 md:text-5xl/10 text-right w-full">What makes me, me?</p>
-            </div>
+        </div>
 
 
         <div id="batch-photo-carousel" class="relative w-full overflow-hidden">
             <!-- Carousel wrapper -->
             <div class="relative h-auto w-auto">
-                <!-- Item 1 -->
-                <div class="absolute translate-x-0 transition-translate duration-700 ease-in-out slides">
-                    <img src="./assets/landing-page-slides-photo-1.png" class="block w-full h-auto" alt="...">
+                <div class="absolute aspect-[3/4] md:aspect-[16/9] xl:aspect-[21/9] w-full translate-x-0 transition-translate duration-700 ease-in-out slides overflow-hidden">
+                    <img src="./assets/gallery_carousel/landing-page-slides-photo-1.png" alt="background blur" class="absolute inset-0 w-full h-full object-cover blur-lg scale-200" />
+                    <img src="./assets/gallery_carousel/landing-page-slides-photo-1.png" alt="main photo" class="relative z-10 max-w-full h-full m-auto object-contain" />
                 </div>
-                <!-- Item 2 -->
-                <div class="absolute translate-x-full transition-translate duration-700 ease-in-out slides">
-                    <img src="./assets/landing-page-slides-photo-1.png" class="block w-full" alt="...">
+                <div class="absolute aspect-[3/4] md:aspect-[16/9] xl:aspect-[21/9] w-full translate-x-0 transition-translate duration-700 ease-in-out slides overflow-hidden">
+                    <img src="./assets/gallery_carousel/preface.jpg" alt="background blur" class="absolute inset-0 w-full h-full object-cover blur-lg scale-200" />
+                    <img src="./assets/gallery_carousel/preface.jpg" alt="main photo" class="relative z-10 max-w-full h-full m-auto object-contain" />
                 </div>
-                <!-- Item 3 -->
-                <div class="absolute translate-x-full transition-translate duration-700 ease-in-out slides">
-                    <img src="./assets/landing-page-slides-photo-1.png" class="block w-full" alt="...">
+                <div class="absolute aspect-[3/4] md:aspect-[16/9] xl:aspect-[21/9] w-full translate-x-0 transition-translate duration-700 ease-in-out slides overflow-hidden">
+                    <img src="./assets/gallery_carousel/tension.jpg" alt="background blur" class="absolute inset-0 w-full h-full object-cover blur-lg scale-200" />
+                    <img src="./assets/gallery_carousel/tension.jpg" alt="main photo" class="relative z-10 max-w-full h-full m-auto object-contain" />
                 </div>
-                <div class="absolute translate-x-full transition-translate duration-700 ease-in-out slides">
-                    <img src="./assets/landing-page-slides-photo-1.png" class="block w-full" alt="...">
+                <div class="absolute aspect-[3/4] md:aspect-[16/9] xl:aspect-[21/9] w-full translate-x-0 transition-translate duration-700 ease-in-out slides overflow-hidden">
+                    <img src="./assets/gallery_carousel/breakaway 2.jpg" alt="background blur" class="absolute inset-0 w-full h-full object-cover blur-lg scale-200" />
+                    <img src="./assets/gallery_carousel/breakaway 2.jpg" alt="main photo" class="relative z-10 max-w-full h-full m-auto object-contain" />
+                </div>
+                <div class="absolute aspect-[3/4] md:aspect-[16/9] xl:aspect-[21/9] w-full translate-x-0 transition-translate duration-700 ease-in-out slides overflow-hidden">
+                    <img src="./assets/gallery_carousel/Collage 7.jpg" alt="background blur" class="absolute inset-0 w-full h-full object-cover blur-lg scale-200" />
+                    <img src="./assets/gallery_carousel/Collage 7.jpg" alt="main photo" class="relative z-10 max-w-full h-full m-auto object-contain" />
+                </div>
+                <div class="absolute aspect-[3/4] md:aspect-[16/9] xl:aspect-[21/9] w-full translate-x-0 transition-translate duration-700 ease-in-out slides overflow-hidden">
+                    <img src="./assets/gallery_carousel/Collage 15.jpg" alt="background blur" class="absolute inset-0 w-full h-full object-cover blur-lg scale-200" />
+                    <img src="./assets/gallery_carousel/Collage 15.jpg" alt="main photo" class="relative z-10 max-w-full h-full m-auto object-contain" />
+                </div>
+                <div class="absolute aspect-[3/4] md:aspect-[16/9] xl:aspect-[21/9] w-full translate-x-0 transition-translate duration-700 ease-in-out slides overflow-hidden">
+                    <img src="./assets/gallery_carousel/Collage 16.jpg" alt="background blur" class="absolute inset-0 w-full h-full object-cover blur-lg scale-200" />
+                    <img src="./assets/gallery_carousel/Collage 16.jpg" alt="main photo" class="relative z-10 max-w-full h-full m-auto object-contain" />
+                </div>
+                <div class="absolute aspect-[3/4] md:aspect-[16/9] xl:aspect-[21/9] w-full translate-x-0 transition-translate duration-700 ease-in-out slides overflow-hidden">
+                    <img src="./assets/gallery_carousel/moments.jpg" alt="background blur" class="absolute inset-0 w-full h-full object-cover blur-lg scale-200" />
+                    <img src="./assets/gallery_carousel/moments.jpg" alt="main photo" class="relative z-10 max-w-full h-full m-auto object-contain" />
+                </div>
+                <div class="absolute aspect-[3/4] md:aspect-[16/9] xl:aspect-[21/9] w-full translate-x-0 transition-translate duration-700 ease-in-out slides overflow-hidden">
+                    <img src="./assets/gallery_carousel/Collage 17.jpg" alt="background blur" class="absolute inset-0 w-full h-full object-cover blur-lg scale-200" />
+                    <img src="./assets/gallery_carousel/Collage 17.jpg" alt="main photo" class="relative z-10 max-w-full h-full m-auto object-contain" />
+                </div>
+                <div class="absolute aspect-[3/4] md:aspect-[16/9] xl:aspect-[21/9] w-full translate-x-0 transition-translate duration-700 ease-in-out slides overflow-hidden">
+                    <img src="./assets/gallery_carousel/space.jpg" alt="background blur" class="absolute inset-0 w-full h-full object-cover blur-lg scale-200" />
+                    <img src="./assets/gallery_carousel/space.jpg" alt="main photo" class="relative z-10 max-w-full h-full m-auto object-contain" />
+                </div>
+                <div class="absolute aspect-[3/4] md:aspect-[16/9] xl:aspect-[21/9] w-full translate-x-0 transition-translate duration-700 ease-in-out slides overflow-hidden">
+                    <img src="./assets/gallery_carousel/Collage 19.jpg" alt="background blur" class="absolute inset-0 w-full h-full object-cover blur-lg scale-200" />
+                    <img src="./assets/gallery_carousel/Collage 19.jpg" alt="main photo" class="relative z-10 max-w-full h-full m-auto object-contain" />
+                </div>
+                <div class="absolute aspect-[3/4] md:aspect-[16/9] xl:aspect-[21/9] w-full translate-x-0 transition-translate duration-700 ease-in-out slides overflow-hidden">
+                    <img src="./assets/gallery_carousel/spread studio shot.jpg" alt="background blur" class="absolute inset-0 w-full h-full object-cover blur-lg scale-200" />
+                    <img src="./assets/gallery_carousel/spread studio shot.jpg" alt="main photo" class="relative z-10 max-w-full h-full m-auto object-contain" />
+                </div>
+                <div class="absolute aspect-[3/4] md:aspect-[16/9] xl:aspect-[21/9] w-full translate-x-0 transition-translate duration-700 ease-in-out slides overflow-hidden">
+                    <img src="./assets/gallery_carousel/Collage 23.jpg" alt="background blur" class="absolute inset-0 w-full h-full object-cover blur-lg scale-200" />
+                    <img src="./assets/gallery_carousel/Collage 23.jpg" alt="main photo" class="relative z-10 max-w-full h-full m-auto object-contain" />
+                </div>
+                <div class="absolute aspect-[3/4] md:aspect-[16/9] xl:aspect-[21/9] w-full translate-x-0 transition-translate duration-700 ease-in-out slides overflow-hidden">
+                    <img src="./assets/gallery_carousel/table.jpg" alt="background blur" class="absolute inset-0 w-full h-full object-cover blur-lg scale-200" />
+                    <img src="./assets/gallery_carousel/table.jpg" alt="main photo" class="relative z-10 max-w-full h-full m-auto object-contain" />
+                </div>
+                <div class="absolute aspect-[3/4] md:aspect-[16/9] xl:aspect-[21/9] w-full translate-x-0 transition-translate duration-700 ease-in-out slides overflow-hidden">
+                    <img src="./assets/gallery_carousel/making maker.jpg" alt="background blur" class="absolute inset-0 w-full h-full object-cover blur-lg scale-200" />
+                    <img src="./assets/gallery_carousel/making maker.jpg" alt="main photo" class="relative z-10 max-w-full h-full m-auto object-contain" />
+                </div>
+                <div class="absolute aspect-[3/4] md:aspect-[16/9] xl:aspect-[21/9] w-full translate-x-0 transition-translate duration-700 ease-in-out slides overflow-hidden">
+                    <img src="./assets/gallery_carousel/conclusion.jpg" alt="background blur" class="absolute inset-0 w-full h-full object-cover blur-lg scale-200" />
+                    <img src="./assets/gallery_carousel/conclusion.jpg" alt="main photo" class="relative z-10 max-w-full h-full m-auto object-contain" />
                 </div>
             </div>
             <!-- Slider indicators -->
@@ -184,20 +240,24 @@
 
         <div id="batch-introduction"
             class="flex flex-col w-full mx-auto py-8 sm:py-16 md:py-24 max-w-7xl px-8 lg:max-w-[80%] fade-in scroll-mt-16 md:scroll-mt-24">
-            <p class="text-md/2 font-secondary font-medium md:font-light mb-8 md:text-xl/8 lg:w-[70%]">In the space between uncertainty
+            <p class="text-md/2 font-secondary font-medium md:font-light mb-8 md:text-xl/8 lg:w-[70%]">In the space
+                between uncertainty
                 and clarity, each of us found a voice. Through late nights, countless revisions, and quiet moments of
                 doubt, we shaped ideas into impact.</p>
-            <p class="text-md/2 font-secondary font-medium md:font-light mb-8 md:text-xl/8 lg:w-[70%]">This showcase brings together 50
+            <p class="text-md/2 font-secondary font-medium md:font-light mb-8 md:text-xl/8 lg:w-[70%]">This showcase
+                brings together 50
                 unique journeys—each one a testament to growth, resilience, and the pursuit of something real. Not just
                 as designers, but as individuals learning to navigate, question, and create on our own terms.</p>
-            <p class="text-md/2 font-secondary font-medium md:font-light md:text-xl/8 lg:w-[70%]">Together, we present not just what we've
+            <p class="text-md/2 font-secondary font-medium md:font-light md:text-xl/8 lg:w-[70%]">Together, we present
+                not just what we've
                 made—<span class="font-secondary-italic">but who we've become.</span></p>
         </div>
 
         <div id="designer-cards-introduction"
             class="flex flex-col w-full mx-auto pb-8 pt-8 md:pt-0 max-w-7xl px-8 lg:max-w-[80%] fade-in">
             <p class="text-3xl/6 font-medium mb-2 mb-8 md:text-5xl/10">The 50 Designers</p>
-            <p class="text-md/2 font-secondary font-medium md:font-light md:text-xl/8 lg:w-[75%]">With that, we introduce the 50 designers
+            <p class="text-md/2 font-secondary font-medium md:font-light md:text-xl/8 lg:w-[75%]">With that, we
+                introduce the 50 designers
                 who have spent the past few years navigating this tension in their own ways. Each designer tells their
                 unique story. Take a peek, and see how their flair, personality, and motivations shine through in their
                 work.</span></p>
@@ -211,9 +271,11 @@
     <div id="footer" class="flex w-full h-auto bg-offwhite">
         <div
             class="flex flex-col md:flex-row justify-center items-center w-full mx-auto py-16 md:py-24 max-w-7xl px-4 sm:px-6 lg:px-8 lg:max-w-[80%] fade-in">
-            <p class="text-md/2 font-secondary font-light text-gray-500 py-4 sm:pr-4 md:text-lg/8 md:pr-8">© 2024 All Rights
+            <p class="text-md/2 font-secondary font-light text-gray-500 py-4 sm:pr-4 md:text-lg/8 md:pr-8">© 2024 All
+                Rights
                 Reserved</p>
-            <p class="text-md/2 font-secondary font-light text-gray-500 py-4 sm:pr-4 md:text-lg/8 md:pr-8">Singapore 117356, 8
+            <p class="text-md/2 font-secondary font-light text-gray-500 py-4 sm:pr-4 md:text-lg/8 md:pr-8">Singapore
+                117356, 8
                 Architecture Dr</p>
             <p class="text-md/2 font-secondary font-light text-gray-500 py-4 md:text-lg/8">4-6 June 2025</p>
         </div>

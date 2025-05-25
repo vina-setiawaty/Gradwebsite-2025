@@ -115,6 +115,9 @@ function loadContent(index) {
 
     const icon_intro_container = document.querySelector("#icon-intro-text");
     icon_intro_container.innerHTML = DESIGNER_DATA[index]["Icon Description"];
+
+    const image_container = document.querySelector("#designer-intro-image");
+    image_container.src = DESIGNER_DATA[index]["Portrait"];
 }
 
 document.addEventListener('DOMContentLoaded', function () {

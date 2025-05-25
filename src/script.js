@@ -5,7 +5,7 @@ let offset = 0;
 let slideIndex = 0;
 const wrapper = document.querySelector('#scrolling-icons-wrapper');
 const images = wrapper.querySelectorAll('img');
-wrapper.style.width = `${wrapper.getBoundingClientRect().height * 5463 / 135}px`;
+wrapper.style.width = `${wrapper.getBoundingClientRect().height * 5472 / 155}px`;
 let imageWidth = wrapper.getBoundingClientRect().width;
 
 window.onload = () => {
@@ -187,7 +187,7 @@ function createDesignerCards() {
         card.classList.add("designer-card", "h-auto", "w-auto", "mx-2", "my-2");
         card.innerHTML = `
             <a href="./designer.html?designer=${name + "-" + i}"> 
-            <img class="bg-blue aspect-3/4 w-[40vw] sm:h-[296px] sm:w-[204px]" src="${designer.image}" alt="${designer.PreferredName}">
+            <img class="hover:opacity-85 object-cover transition-all duration-300 bg-blue aspect-3/4 w-[40vw] sm:h-[296px] sm:w-[204px]" src="${designer.Portrait}" alt="${designer.PreferredName}">
             <p class="font-light font-secondary py-2">${designer.PreferredName}</p>
             </a>
         `;
