@@ -365,6 +365,12 @@
   .aspect-\[3\/4\] {
     aspect-ratio: 3/4;
   }
+  .aspect-\[9\/16\] {
+    aspect-ratio: 9/16;
+  }
+  .aspect-\[16\/9\] {
+    aspect-ratio: 16/9;
+  }
   .h-3 {
     height: calc(var(--spacing) * 3);
   }
@@ -1068,6 +1074,11 @@
       padding-block: calc(var(--spacing) * 16);
     }
   }
+  .sm\:pt-16 {
+    @media (width >= 40rem) {
+      padding-top: calc(var(--spacing) * 16);
+    }
+  }
   .sm\:pr-0 {
     @media (width >= 40rem) {
       padding-right: calc(var(--spacing) * 0);
@@ -1123,6 +1134,11 @@
   .md\:aspect-\[16\/9\] {
     @media (width >= 48rem) {
       aspect-ratio: 16/9;
+    }
+  }
+  .md\:aspect-\[21\/9\] {
+    @media (width >= 48rem) {
+      aspect-ratio: 21/9;
     }
   }
   .md\:h-10 {
@@ -1572,6 +1588,11 @@
   .xl\:aspect-\[21\/9\] {
     @media (width >= 80rem) {
       aspect-ratio: 21/9;
+    }
+  }
+  .xl\:aspect-\[24\/9\] {
+    @media (width >= 80rem) {
+      aspect-ratio: 24/9;
     }
   }
   .xl\:w-20 {
