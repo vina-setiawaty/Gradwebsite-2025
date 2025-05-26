@@ -308,14 +308,8 @@
   .mt-0 {
     margin-top: calc(var(--spacing) * 0);
   }
-  .mt-4 {
-    margin-top: calc(var(--spacing) * 4);
-  }
   .mt-8 {
     margin-top: calc(var(--spacing) * 8);
-  }
-  .mt-16 {
-    margin-top: calc(var(--spacing) * 16);
   }
   .mt-42 {
     margin-top: calc(var(--spacing) * 42);
@@ -365,9 +359,6 @@
   .aspect-\[3\/4\] {
     aspect-ratio: 3/4;
   }
-  .aspect-\[9\/16\] {
-    aspect-ratio: 9/16;
-  }
   .aspect-\[16\/9\] {
     aspect-ratio: 16/9;
   }
@@ -385,9 +376,6 @@
   }
   .h-16 {
     height: calc(var(--spacing) * 16);
-  }
-  .h-24 {
-    height: calc(var(--spacing) * 24);
   }
   .h-32 {
     height: calc(var(--spacing) * 32);
@@ -415,9 +403,6 @@
   }
   .h-screen {
     height: 100vh;
-  }
-  .max-h-full {
-    max-height: 100%;
   }
   .w-3 {
     width: calc(var(--spacing) * 3);
@@ -515,12 +500,6 @@
     --tw-scale-x: 100%;
     --tw-scale-y: 100%;
     --tw-scale-z: 100%;
-    scale: var(--tw-scale-x) var(--tw-scale-y);
-  }
-  .scale-110 {
-    --tw-scale-x: 110%;
-    --tw-scale-y: 110%;
-    --tw-scale-z: 110%;
     scale: var(--tw-scale-x) var(--tw-scale-y);
   }
   .scale-200 {
@@ -726,12 +705,6 @@
   }
   .pt-16 {
     padding-top: calc(var(--spacing) * 16);
-  }
-  .pt-20 {
-    padding-top: calc(var(--spacing) * 20);
-  }
-  .pt-24 {
-    padding-top: calc(var(--spacing) * 24);
   }
   .pr-2 {
     padding-right: calc(var(--spacing) * 2);
@@ -962,24 +935,10 @@
       }
     }
   }
-  .hover\:opacity-80 {
-    &:hover {
-      @media (hover: hover) {
-        opacity: 80%;
-      }
-    }
-  }
   .hover\:opacity-85 {
     &:hover {
       @media (hover: hover) {
         opacity: 85%;
-      }
-    }
-  }
-  .hover\:opacity-90 {
-    &:hover {
-      @media (hover: hover) {
-        opacity: 90%;
       }
     }
   }
@@ -1136,11 +1095,6 @@
       aspect-ratio: 16/9;
     }
   }
-  .md\:aspect-\[21\/9\] {
-    @media (width >= 48rem) {
-      aspect-ratio: 21/9;
-    }
-  }
   .md\:h-10 {
     @media (width >= 48rem) {
       height: calc(var(--spacing) * 10);
@@ -1159,6 +1113,11 @@
   .md\:h-\[0px\] {
     @media (width >= 48rem) {
       height: 0px;
+    }
+  }
+  .md\:h-full {
+    @media (width >= 48rem) {
+      height: 100%;
     }
   }
   .md\:h-screen {
@@ -1258,11 +1217,6 @@
   .md\:py-24 {
     @media (width >= 48rem) {
       padding-block: calc(var(--spacing) * 24);
-    }
-  }
-  .md\:pt-0 {
-    @media (width >= 48rem) {
-      padding-top: calc(var(--spacing) * 0);
     }
   }
   .md\:pt-8 {
@@ -1588,11 +1542,6 @@
   .xl\:aspect-\[21\/9\] {
     @media (width >= 80rem) {
       aspect-ratio: 21/9;
-    }
-  }
-  .xl\:aspect-\[24\/9\] {
-    @media (width >= 80rem) {
-      aspect-ratio: 24/9;
     }
   }
   .xl\:w-20 {
