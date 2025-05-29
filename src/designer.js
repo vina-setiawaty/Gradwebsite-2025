@@ -1,5 +1,12 @@
 import { DESIGNER_DATA } from "./data.js";
 
+const links_icon = {
+    "Linkedin": "./assets/linkedin.svg",
+    "Portfolio": "./assets/website-link.svg",
+    "Behance": "./assets/behance-256.png",
+    "Instagram": "./assets/instagram.png",
+}
+
 window.onload = () => {
     const params = new URLSearchParams(window.location.search);
     console.log(params);
@@ -119,54 +126,140 @@ function loadContent(index) {
     const image_container = document.querySelector("#designer-intro-image");
     image_container.src = DESIGNER_DATA[index]["Portrait"];
 
-    // const title_container = document.querySelector("#projects-title");
-    // title_container.innerHTML = DESIGNER_DATA[index]["Project Title ( 1 Liner)"];
+    const email = document.querySelectorAll(".email-link");
+    email.forEach((el) => {
+        el.href = `mailto:${DESIGNER_DATA[index]["Email"]}`;
+    });
+    const email_text = document.querySelectorAll(".designer-email");
+    email_text.forEach((el) => {
+        el.innerHTML = DESIGNER_DATA[index]["Email"];
+    });
 
-    // const supervisor_container = document.querySelector("#projects-subtitle");
-    // if (DESIGNER_DATA[index]["Is your project thesis? (tick if yes)"] === "TRUE") {
-    //     supervisor_container.innerHTML = `Thesis, under the guidance of ${DESIGNER_DATA[index]["Supervisor"]}`;
-    // } else {
-    //     let content = `Platform, under the guidance of ${DESIGNER_DATA[index]["Supervisor"]}`;
-    //     if (DESIGNER_DATA[index]["If it is platform project, list down your group members here"] !== "") {
-    //         content += `, in collaboration with ${DESIGNER_DATA[index]["If it is platform project, list down your group members here"]}`;
-    //     }
-    //     supervisor_container.innerHTML = content;
-    // }
+    if (DESIGNER_DATA[index]["links"][0] !== "") {
+        const links_container = document.querySelectorAll(".first-link-ref")
+        links_container.forEach((el) => {
+            el.href = DESIGNER_DATA[index][DESIGNER_DATA[index]["links"][0]];
+            el.querySelector("img").src = links_icon[DESIGNER_DATA[index]["links"][0]];
+            el.querySelector("p").innerHTML = DESIGNER_DATA[index][DESIGNER_DATA[index]["links"][0]].split("/")[-1];
+            console.log(DESIGNER_DATA[index][DESIGNER_DATA[index]["links"][0]].replace(/\/+$/, "").split("/").pop());
+        })
+        if (DESIGNER_DATA[index]["links"].length > 1) {
+            const second_links_container = document.querySelectorAll(".second-link-ref")
+            second_links_container.forEach((el) => {
+                el.href = DESIGNER_DATA[index][DESIGNER_DATA[index]["links"][1]];
+                el.querySelector("img").src = links_icon[DESIGNER_DATA[index]["links"][1]];
+                el.querySelector("p").innerHTML = DESIGNER_DATA[index][DESIGNER_DATA[index]["links"][1]].split("/")[-1];
+                
+            })
+        } else {
+            const second_links_container = document.querySelectorAll(".second-link-ref")
+            second_links_container.forEach((el) => {
+                el.remove();
+            })
+        }
+    } else {
+        const links_container = document.querySelectorAll(".first-link-ref")
+        links_container.forEach((el) => {
+            el.remove();
+        })
+        const second_links_container = document.querySelectorAll(".second-link-ref")
+        second_links_container.forEach((el) => {
+            el.remove();
+        })
+    }
 
-    // const main_image_container = document.querySelector("#project-main-photo");
-    // main_image_container.src = DESIGNER_DATA[index]["Main Project Picture 16:9"];
+    const title_container = document.querySelector("#projects-title");
+    title_container.innerHTML = DESIGNER_DATA[index]["Project Title ( 1 Liner)"];
 
-    // const header_1_container = document.querySelector("#header-1");
-    // header_1_container.innerHTML = DESIGNER_DATA[index]["Header_1"];
-    // const description_1_container = document.querySelector("#description-1");
-    // description_1_container.innerHTML = DESIGNER_DATA[index]["Description_1"];
-    // const header_2_container = document.querySelector("#header-2"); 
-    // header_2_container.innerHTML = DESIGNER_DATA[index]["Header_2"];
-    // const description_2_container = document.querySelector("#description-2");
-    // description_2_container.innerHTML = DESIGNER_DATA[index]["Description_2"];
+    const supervisor_container = document.querySelector("#projects-subtitle");
+    if (DESIGNER_DATA[index]["Is your project thesis? (tick if yes)"] === "TRUE") {
+        supervisor_container.innerHTML = `Thesis, under the guidance of ${DESIGNER_DATA[index]["Supervisor"]}`;
+    } else {
+        let content = `Platform, under the guidance of ${DESIGNER_DATA[index]["Supervisor"]}`;
+        if (DESIGNER_DATA[index]["If it is platform project, list down your group members here"] !== "") {
+            content += `, in collaboration with ${DESIGNER_DATA[index]["If it is platform project, list down your group members here"]}`;
+        }
+        supervisor_container.innerHTML = content;
+    }
 
-    // const photo_2_container = document.querySelector("#photo-2");
-    // photo_2_container.src = DESIGNER_DATA[index]["2nd pic (16:9)"];
-    // const photo_3_container = document.querySelector("#photo-3");
-    // photo_3_container.src = DESIGNER_DATA[index]["3rd Pic (3:4)"];
-    // const photo_4_container = document.querySelector("#photo-4");
-    // if (DESIGNER_DATA[index]["Picture_1 3:4"] !== "") {
-    //     photo_4_container.src = DESIGNER_DATA[index]["Picture_1 3:4"];
-    // } else {
-    //     photo_4_container.style.display = "none"; // Hide the element if no image is provided
-    // }
-    // const photo_5_container = document.querySelector("#photo-5");
-    // if (DESIGNER_DATA[index]["Picture_2 3:4"] !== "") {
-    //     photo_5_container.src = DESIGNER_DATA[index]["Picture_2 3:4"];
-    // } else {
-    //     photo_5_container.style.display = "none"; // Hide the element if no image is provided
-    // }
-    // const photo_6_container = document.querySelector("#photo-6");
-    // if (DESIGNER_DATA[index]["Picture_3 3:4"] !== "") {
-    //     photo_6_container.src = DESIGNER_DATA[index]["Picture_3 3:4"];
-    // } else {
-    //     photo_6_container.style.display = "none"; // Hide the element if no image is provided
-    // }
+    const indiv_icons_container = document.querySelector("#indiv-icon");
+    indiv_icons_container.src = DESIGNER_DATA[index]["Iconfile"]
+
+    const main_image_container = document.querySelector("#project-main-photo");
+    if (DESIGNER_DATA[index]["MainPic"].includes("assets")) {
+        main_image_container.src = DESIGNER_DATA[index]["MainPic"];
+    } else {
+        const video_container = document.querySelector("#project-main-video");
+        video_container.classList.remove("hidden")
+        main_image_container.classList.add("hidden");
+        video_container.src = DESIGNER_DATA[index]["MainPic"];
+    }
+
+    const header_1_container = document.querySelector("#header-1");;
+    if (DESIGNER_DATA[index]["Header_1"] !== "") {
+        header_1_container.innerHTML = DESIGNER_DATA[index]["Header_1"];
+    } else {
+        header_1_container.remove(); // Hide the element if no image is provided
+    }
+
+    const description_1_container = document.querySelector("#description-1");
+    if (DESIGNER_DATA[index]["Description_1"] !== "") { 
+        description_1_container.innerHTML = DESIGNER_DATA[index]["Description_1"]
+    } else {
+        description_1_container.remove(); // Hide the element if no content is provided
+    }
+
+    const header_2_container = document.querySelector("#header-2"); 
+    if (DESIGNER_DATA[index]["Header_2"] !== "") {
+        header_2_container.innerHTML = DESIGNER_DATA[index]["Header_2"];
+    } else {
+        header_2_container.remove(); // Hide the element if no image is provided
+    }
+
+    const description_2_container = document.querySelector("#description-2");
+    if (DESIGNER_DATA[index]["Description_2"] !== "") {
+        description_2_container.innerHTML = DESIGNER_DATA[index]["Description_2"];
+    } else {
+        if (DESIGNER_DATA[index]["Header_2"] === "" && DESIGNER_DATA[index]["Description_2"] === "") {
+            const parent = description_2_container.parentElement;
+            parent.remove()
+        } else {
+            description_2_container.remove(); // Hide the element if no content is provided
+        }
+    }
+
+    const photo_2_container = document.querySelector("#photo-2");
+    if (DESIGNER_DATA[index]["2nd pic (16:9) Landscape"] !== "") {
+        photo_2_container.src = DESIGNER_DATA[index]["2nd pic (16:9) Landscape"];
+    } else {
+        photo_2_container.parentElement.remove(); // Hide the element if no image is provided
+    }
+
+    const photo_3_container = document.querySelector("#photo-3");
+    if (DESIGNER_DATA[index]["3rd Pic (3:4) Portrait"] !== "") {
+        photo_3_container.src = DESIGNER_DATA[index]["3rd Pic (3:4) Portrait"];
+    } else {
+        photo_3_container.parentElement.remove(); // Hide the element if no image is provided
+    }
+
+    const photo_4_container = document.querySelector("#photo-4");
+    if (DESIGNER_DATA[index]["Picture_1 3:4"] !== "") {
+        photo_4_container.src = DESIGNER_DATA[index]["Picture_1 3:4"];
+    } else {
+        photo_4_container.parentElement.remove(); // Hide the element if no image is provided
+    }
+    const photo_5_container = document.querySelector("#photo-5");
+    if (DESIGNER_DATA[index]["Picture_2 3:4"] !== "") {
+        photo_5_container.src = DESIGNER_DATA[index]["Picture_2 3:4"];
+    } else {
+        photo_5_container.parentElement.remove(); // Hide the element if no image is provided
+    }
+    const photo_6_container = document.querySelector("#photo-6");
+    if (DESIGNER_DATA[index]["Picture_3 3:4"] !== "") {
+        photo_6_container.src = DESIGNER_DATA[index]["Picture_3 3:4"];
+    } else {
+        photo_6_container.parentElement.remove(); // Hide the element if no image is provided
+    }
 }
 
 document.addEventListener('DOMContentLoaded', function () {

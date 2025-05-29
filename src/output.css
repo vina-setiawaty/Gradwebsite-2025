@@ -198,6 +198,9 @@
   }
 }
 @layer utilities {
+  .invisible {
+    visibility: hidden;
+  }
   .visible {
     visibility: visible;
   }
@@ -220,6 +223,9 @@
   }
   .relative {
     position: relative;
+  }
+  .static {
+    position: static;
   }
   .inset-0 {
     inset: calc(var(--spacing) * 0);
@@ -356,9 +362,6 @@
   .aspect-16\/9 {
     aspect-ratio: 16/9;
   }
-  .aspect-\[3\/4\] {
-    aspect-ratio: 3/4;
-  }
   .aspect-\[16\/9\] {
     aspect-ratio: 16/9;
   }
@@ -418,6 +421,12 @@
   }
   .w-16 {
     width: calc(var(--spacing) * 16);
+  }
+  .w-20 {
+    width: calc(var(--spacing) * 20);
+  }
+  .w-24 {
+    width: calc(var(--spacing) * 24);
   }
   .w-\[40vw\] {
     width: 40vw;
@@ -1065,11 +1074,6 @@
       margin-block: calc(var(--spacing) * 16);
     }
   }
-  .md\:mt-0 {
-    @media (width >= 48rem) {
-      margin-top: calc(var(--spacing) * 0);
-    }
-  }
   .md\:mt-16 {
     @media (width >= 48rem) {
       margin-top: calc(var(--spacing) * 16);
@@ -1088,11 +1092,6 @@
   .md\:aspect-1\/1 {
     @media (width >= 48rem) {
       aspect-ratio: 1/1;
-    }
-  }
-  .md\:aspect-\[16\/9\] {
-    @media (width >= 48rem) {
-      aspect-ratio: 16/9;
     }
   }
   .md\:h-10 {

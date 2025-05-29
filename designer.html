@@ -99,16 +99,16 @@
             <div
                 class="hidden lg:block bg-offwhite-translucent lg:border-1 border-black lg:backdrop-blur-[8px] py-4 lg:py-8 lg:px-8 lg:mx-auto w-full lg:w-auto flex flex-col justify-center items-center lg:items-start fade-in">
                 <!-- <div class="bg-offwhite-translucent border-1 border-black lg:backdrop-blur-[8px] py-4 lg:py-8 lg:px-8 lg:mx-auto w-full lg:w-auto flex flex-col justify-center items-center lg:items-start fade-in"> -->
-                <a id="email-link" href="">
+                <a class="email-link" href="">
                     <div class="flex flex-row justify-start items-center mb-4">
-                        <img id="email-button" src="./assets/Email.svg" alt="email" class="block w-14 pr-4"
+                        <img id="email-button" src="./assets/Email.svg" alt="email" class="block w-14 pr-4 h-auto"
                             aria-hidden="true" data-slot="icon">
-                        <p class="text-lg font-secondary">"email"</p>
+                        <p class="designer-email" class="text-lg font-secondary">"email"</p>
                     </div>
                 </a>
                 <a class="first-link-ref" href="">
                     <div class="flex flex-row justify-stert items-center mb-4">
-                        <img src="./assets/linkedin.svg" alt="linkedin" class="first-link-button block w-14 pr-4"
+                        <img src="./assets/linkedin.svg" alt="linkedin" class="first-link-button block w-14 pr-4 h-auto"
                             aria-hidden="true" data-slot="icon">
                         <p class="first-link text-lg font-secondary">"linkedin"</p>
                     </div>
@@ -116,7 +116,7 @@
                 <a class="second-link-ref" href="">
                     <div class="flex flex-row justify-start items-center">
                         <img src="./assets/website-link.svg" alt="portfolio"
-                            class="second-link-button block w-14 pr-4" aria-hidden="true" data-slot="icon">
+                            class="second-link-button block w-14 pr-4 h-auto" aria-hidden="true" data-slot="icon">
                         <p class="second-link text-lg font-secondary">"portfolio"</p>
                     </div>
                 </a>
@@ -132,9 +132,16 @@
                     <img id="designer-intro-image" alt="designer-photo" src="./assets/photo.svg" class="bg-blue my-auto w-full h-auto aspect-3/4 object-cover">
                 </div>
                 <div id="designer-intro-links" class="lg:hidden mb-8 fade-in">
+                    <a class="email-link" href="">
+                        <div class="flex flex-row justify-start items-center mb-4">
+                            <img id="email-button" src="./assets/Email.svg" alt="email" class="block w-14 pr-4 h-auto"
+                                aria-hidden="true" data-slot="icon">
+                            <p class="designer-email" class="text-lg font-secondary">"email"</p>
+                        </div>
+                    </a>
                     <a class="first-link-ref" href="">
                         <div class="flex flex-row justify-start items-center mb-4">
-                            <img src="./assets/linkedin.svg" alt="linkedin" class="first-link-button block w-12 pr-4"
+                            <img src="./assets/linkedin.svg" alt="linkedin" class="first-link-button block w-14 pr-4"
                                 aria-hidden="true" data-slot="icon">
                             <p class="first-link text-lg font-secondary">"linkedin"</p>
                         </div>
@@ -142,7 +149,7 @@
                     <a class="second-link-ref" href="">
                         <div class="flex flex-row justify-start items-center">
                             <img src="./assets/website-link.svg" alt="portfolio"
-                                class="second-link-button block w-12 pr-4" aria-hidden="true" data-slot="icon">
+                                class="second-link-button block w-14 pr-4" aria-hidden="true" data-slot="icon">
                             <p class="second-link text-lg font-secondary">"portfolio"</p>
                         </div>
                     </a>
@@ -167,7 +174,7 @@
                         </p>
                     </div>
                     <div id="designer-intro-icon">
-                        <img alt="designer-icon" src="./assets/icon_placeholder.svg" class="h-16">
+                        <img id="indiv-icon" alt="designer-icon" src="./assets/icon_placeholder.svg" class="w-24 h-auto">
                     </div>
                     <div id="designer-intro-icon_description">
                         <p id="icon-intro-text" class="text-md/2 font-secondary font-light">Douglas believes in design that
@@ -183,6 +190,7 @@
                 </div>
                 <div id="designer-project-main-image" class="w-full h-auto fade-in">
                     <img id="project-main-photo" alt="project-photo" class="w-full h-auto aspect-16/9 object-cover bg-blue">
+                    <iframe id="project-main-video" class="project-video w-full aspect-[16/9] hidden" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <div id="designer-project-content-one" class="w-full h-auto flex flex-col md:flex-row items-end justify-between gap-y-8 lg:gap-y-12 gap-x-4 md:gap-x-8 lg:gap-x-12">
                     <div class="flex-1 flex flex-col gap-y-8 justify-start items-end">

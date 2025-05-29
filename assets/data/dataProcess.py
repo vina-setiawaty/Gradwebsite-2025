@@ -3,7 +3,7 @@ import json
 
 def csv_to_json(csv_file, json_file):
     # Read CSV file
-    with open(csv_file, 'r') as csvfile:
+    with open(csv_file, mode='r', encoding='utf-8') as csvfile:
         # Create a CSV reader object
         csv_reader = csv.DictReader(csvfile)
         
@@ -17,4 +17,4 @@ def csv_to_json(csv_file, json_file):
         json.dump(data, jsonfile, indent=4)
 
 # Example usage:
-csv_to_json('data_260525.csv', 'data_260525.json')
+csv_to_json('data_280525.csv', 'data_280525.json')
