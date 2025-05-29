@@ -140,8 +140,8 @@ function loadContent(index) {
         links_container.forEach((el) => {
             el.href = DESIGNER_DATA[index][DESIGNER_DATA[index]["links"][0]];
             el.querySelector("img").src = links_icon[DESIGNER_DATA[index]["links"][0]];
-            el.querySelector("p").innerHTML = DESIGNER_DATA[index][DESIGNER_DATA[index]["links"][0]].split("/")[-1];
-            console.log(DESIGNER_DATA[index][DESIGNER_DATA[index]["links"][0]].replace(/\/+$/, "").split("/").pop());
+            el.querySelector("p").innerHTML = DESIGNER_DATA[index][DESIGNER_DATA[index]["links"][0]];
+            // console.log(DESIGNER_DATA[index][DESIGNER_DATA[index]["links"][0]].replace(/\/+$/, "").split("/").pop());
         })
         if (DESIGNER_DATA[index]["links"].length > 1) {
             const second_links_container = document.querySelectorAll(".second-link-ref")
