@@ -148,8 +148,7 @@ function loadContent(index) {
             second_links_container.forEach((el) => {
                 el.href = DESIGNER_DATA[index][DESIGNER_DATA[index]["links"][1]];
                 el.querySelector("img").src = links_icon[DESIGNER_DATA[index]["links"][1]];
-                el.querySelector("p").innerHTML = DESIGNER_DATA[index][DESIGNER_DATA[index]["links"][1]].split("/")[-1];
-                
+                el.querySelector("p").innerHTML = DESIGNER_DATA[index][DESIGNER_DATA[index]["links"][1]];
             })
         } else {
             const second_links_container = document.querySelectorAll(".second-link-ref")
