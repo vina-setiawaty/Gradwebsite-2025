@@ -187,6 +187,9 @@ function loadContent(index) {
             content += `, in collaboration with ${DESIGNER_DATA[index]["If it is platform project, list down your group members here"]}`;
         }
         supervisor_container.innerHTML = content;
+        if (DESIGNER_DATA[index]["Supervisor"] === "") {
+            supervisor_container.remove(); // Hide the element if no supervisor is provided
+        }
     }
 
     const indiv_icons_container = document.querySelector("#indiv-icon");

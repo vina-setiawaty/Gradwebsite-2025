@@ -1,6 +1,6 @@
 import json
 
-with open("data_280525.json", "r") as file1:
+with open("data_290525.json", "r") as file1:
     data = json.load(file1)
 
 # with open("piclink.json", "r") as file2:
@@ -19,7 +19,7 @@ with open("data_280525.json", "r") as file1:
 #     found = False]
 
     for row in data:
-        row["links"] = ["Email"] + row["Which of these links you want on your Gradsite profile (max 2)"].split(",")
+        row["links"] = row["Which of these links you want on your Gradsite profile (max 2)"].split(",")
         row["Iconfile"] = "./assets/indiv_icons/" + row["Iconfile"]
         row["Portrait"] = "./assets/portraits/" + row["Portrait"].split('/')[-1]
         if "postimg" in row["MainPic"]:
@@ -40,6 +40,6 @@ print(data[0])
 # print(type(data))
 # print(type(data[0]))
 
-with open("processingData3.json", "w") as file:
+with open("processingData4.json", "w") as file:
     json.dump(data, file, indent=4)
 
