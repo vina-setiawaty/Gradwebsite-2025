@@ -140,7 +140,11 @@ function loadContent(index) {
         links_container.forEach((el) => {
             el.href = DESIGNER_DATA[index][DESIGNER_DATA[index]["links"][0]];
             el.querySelector("img").src = links_icon[DESIGNER_DATA[index]["links"][0]];
-            el.querySelector("p").innerHTML = DESIGNER_DATA[index][DESIGNER_DATA[index]["links"][0]];
+            if (DESIGNER_DATA[index]["links"][0] === "Portfolio") {
+                el.querySelector("p").innerHTML = DESIGNER_DATA[index][DESIGNER_DATA[index]["links"][0]].replace("https://", "");
+            } else {
+                el.querySelector("p").innerHTML = DESIGNER_DATA[index][DESIGNER_DATA[index]["links"][0] + "Username"];
+            }
             // console.log(DESIGNER_DATA[index][DESIGNER_DATA[index]["links"][0]].replace(/\/+$/, "").split("/").pop());
         })
         if (DESIGNER_DATA[index]["links"].length > 1) {
@@ -148,7 +152,11 @@ function loadContent(index) {
             second_links_container.forEach((el) => {
                 el.href = DESIGNER_DATA[index][DESIGNER_DATA[index]["links"][1]];
                 el.querySelector("img").src = links_icon[DESIGNER_DATA[index]["links"][1]];
-                el.querySelector("p").innerHTML = DESIGNER_DATA[index][DESIGNER_DATA[index]["links"][1]];
+                if (DESIGNER_DATA[index]["links"][1] === "Portfolio") {
+                    el.querySelector("p").innerHTML = DESIGNER_DATA[index][DESIGNER_DATA[index]["links"][1]].replace("https://", "");
+                } else {
+                    el.querySelector("p").innerHTML = DESIGNER_DATA[index][DESIGNER_DATA[index]["links"][1] + "Username"];
+                }
             })
         } else {
             const second_links_container = document.querySelectorAll(".second-link-ref")
