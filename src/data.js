@@ -914,7 +914,7 @@ const DESIGNER_DATA = [
         "Cluster": "CI",
         "Supervisor": "Hans Tan",
         "MainPic": "./assets/projects/temp-Imagex1m-Rx-W.avif",
-        "Header_1": "What is the future of discovery? \n\n",
+        "Header_1": "What is the future of discovery?",
         "Description_1": "eavesolutions is a speculative brand that reimagines music discovery in a world shaped by personalization and algorithmic recommendations. Each product invites its user to discover songs by exploring the physical world, through imagery, auditory and spatial perception. </p><br><p>Leveraging on the algorithms that already exists, VIS—10M, AUD—24HR, and SPC—10KM re-introduces discovery by turning users into an algorithmic voyeur in the physical world. By integrating current technology with the organic human experience, this project is a reflection of our evolving relationship with technology, probing us to confront our own relationship with discovery, choice, and control.</p><br><p>Through the medium of 3 commercials, this project offers an alternate reality in response to the rising modern problem of algorithmic fatigue. Yet, it simply seeks to remind us to look around, listen, and discover again.</p><br><p>Discover the full project @eavesolutions on instagram.",
         "2nd pic (16:9) Landscape": "",
         "3rd Pic (3:4) Portrait": "",
