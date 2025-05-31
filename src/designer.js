@@ -270,6 +270,10 @@ function loadContent(index) {
     } else {
         photo_6_container.parentElement.remove(); // Hide the element if no image is provided
     }
+
+    // if (DESIGNER_DATA[index]["Picture_1 3:4"] !== "" && DESIGNER_DATA[index]["Picture_2 3:4"] !== "" && DESIGNER_DATA[index]["Picture_3 3:4"] !== "") {
+    //     photo_4_container.parentElement.parentElement.remove();
+    // }
 }
 
 document.addEventListener('DOMContentLoaded', function () {
