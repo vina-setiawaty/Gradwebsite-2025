@@ -904,7 +904,7 @@ const DESIGNER_DATA = [
         "InstagramUsername": "@eavesolutions",
         "Behance": "",
         "Portfolio": "https://readymag.website/u1579269952/rxrxrx",
-        "Portrait": "./assets/portraits/LRX In-Situ 2.jpg",
+        "Portrait": "./assets/portraits/LRX.jpg",
         "Linkedin": "https://www.linkedin.com/in/rui-xuan-lau-16a156239/",
         "Which of these links you want on your Archive profile": "Linkedin + Email + thesis instagram",
         "Which of these links you want on your Gradsite profile (max 2)": "Instagram",
