@@ -93,7 +93,7 @@ const DESIGNER_DATA = [
         "Which of these links you want on your Gradsite profile (max 2)": "Portfolio,Instagram",
         "Is your project thesis? (tick if yes)": "TRUE",
         "If it is platform project, list down your group members here": "-",
-        "Project Title ( 1 Liner)": "camers for consideration",
+        "Project Title ( 1 Liner)": "cameras for consideration",
         "Cluster": "CI",
         "Supervisor": "Hans Tan",
         "MainPic": "./assets/projects/awkerwey-photo1.jpg",
