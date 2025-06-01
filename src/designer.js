@@ -250,6 +250,8 @@ function loadContent(index) {
         photo_3_container.src = DESIGNER_DATA[index]["3rd Pic (3:4) Portrait"];
     } else {
         photo_3_container.parentElement.remove(); // Hide the element if no image is provided
+        header_1_container.parentElement.classList.add("pr-8", "md:pr-16", "lg:pr-0"); // Hide the header if no image is provided
+        photo_2_container.parentElement.classList.add("md:pr-16", "lg:pr-0"); // Hide the header if no image is provided
     }
 
     const photo_4_container = document.querySelector("#photo-4");
