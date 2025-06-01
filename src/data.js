@@ -903,7 +903,7 @@ const DESIGNER_DATA = [
         "Instagram": "https://www.instagram.com/eavesolutions/",
         "InstagramUsername": "@eavesolutions",
         "Behance": "",
-        "Portfolio": "https://readymag.website/u1579269952/rxrxrx",
+        "Portfolio": "https://readymag.website/u1579269952/rxrxrx/",
         "Portrait": "./assets/portraits/LRX.jpg",
         "Linkedin": "https://www.linkedin.com/in/rui-xuan-lau-16a156239/",
         "Which of these links you want on your Archive profile": "Linkedin + Email + thesis instagram",
@@ -927,7 +927,8 @@ const DESIGNER_DATA = [
         "Project Description": "",
         "Video (Youtube/Vimeo)": "",
         "links": [
-            "Instagram"
+            "Instagram",
+            "Portfolio"
         ]
     },
     {
@@ -1175,7 +1176,7 @@ const DESIGNER_DATA = [
         "Email": "ozkdouglas@gmail.com",
         "Instagram": "",
         "Behance": "",
-        "Portfolio": "https://douglas-ong-design.webflow.io",
+        "Portfolio": "https://douglasong.weebly.com",
         "Portrait": "./assets/portraits/Douglas.png",
         "Linkedin": "https://www.linkedin.com/in/douglas-ong-zk/",
         "LinkedinUsername": "@douglas-ong-zk",
@@ -1189,7 +1190,7 @@ const DESIGNER_DATA = [
         "MainPic": "./assets/projects/HERO1.jpg",
         "Header_1": "From Scan to Splint: Transforming the OT Workflow",
         "Description_1": "Precicast is a novel scalable system for creating topologically-optimised 3D-printed spica casts through 3D scanning, to improve flexor tendon syndrome recovery. Coming in a set of 3 at optimised 30\u00b0, 60\u00b0 and 80\u00b0 splints, it is built using skin-safe composite PETG, 3D printed with a generative lattice for a balance of breathability and tensile strength. Unlike traditional splints, it is impact resistant and medically sterilizable. Through 3D scanning and printing, the Precicast system digitises the occupational therapist\u2019s workflow and automates key steps, where it cuts post-op fitting time from 60 to 20 minutes and slashes weekly consults from 40 to 10 minutes, saving 3 hours daily and boosting patient capacity.",
-        "2nd pic (16:9) Landscape": "./assets/projects/full-Copy.jpg",
+        "2nd pic (16:9) Landscape": "./assets/projects/full - Copy2.jpg",
         "3rd Pic (3:4) Portrait": "",
         "Header_2": "Where Orthopaedics meets Computational Design",
         "Description_2": "Precicast uses precise lattice patterning using Kangaroo and Lunchbox algorithms. This wasn't just aesthetically different\u2014it reduced weight by 15% compared to 3D printing solid structures while maintaining structural integrity.</p><br><p>Link to Video: <a href='https://youtu.be/0YgbGaDMAUs?feature=shared'>https://youtu.be/0YgbGaDMAUs?feature=shared</a>",
@@ -1332,7 +1333,7 @@ const DESIGNER_DATA = [
         "Portfolio": "https://www.rynrd.site",
         "Portrait": "./assets/portraits/Reynard.png",
         "Linkedin": "https://www.linkedin.com/in/rynrd/",
-        "LinkedinUsername": "@rynrd",
+        "LinkedinUsername": "@reynard-seah",
         "Which of these links you want on your Archive profile": "all",
         "Which of these links you want on your Gradsite profile (max 2)": "Linkedin,Portfolio",
         "Is your project thesis? (tick if yes)": "TRUE",
