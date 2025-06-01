@@ -547,6 +547,12 @@
   .scroll-mt-50 {
     scroll-margin-top: calc(var(--spacing) * 50);
   }
+  .scroll-mt-54 {
+    scroll-margin-top: calc(var(--spacing) * 54);
+  }
+  .scroll-mt-58 {
+    scroll-margin-top: calc(var(--spacing) * 58);
+  }
   .flex-col {
     flex-direction: column;
   }
@@ -738,6 +744,9 @@
   }
   .pb-3 {
     padding-bottom: calc(var(--spacing) * 3);
+  }
+  .pb-4 {
+    padding-bottom: calc(var(--spacing) * 4);
   }
   .pb-8 {
     padding-bottom: calc(var(--spacing) * 8);
